@@ -1,81 +1,80 @@
+$gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, #F1EABA 19.12%, #F9F6CB 22.11%, #A77D46 49.09%, #F3EEA2 83.06%, #EEE495 86.06%, #E1CC75 90.05%, #CCA642 96.05%, #BF8E22 100.04%);
+
+
+.event-title-center{
+    h2 {
+        padding-top: 40px;
+        font-size: 20px;
+        font-family: 'Cormorant', 'serif';
+        text-transform: uppercase;
+        text-align: center;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
 .event-container {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #24272A;
     position: relative;
-    border: 2px solid blue;
     max-width: 1240px;
     margin: 0 auto;
-
-
-    h2 {
-        font-size: 32px;
-        font-family: 'Cormorant', 'serif';
-        color: white;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
+    gap: 130px;
 }
 
-.event-container-img {
-    border: 2px solid orange;
-    width: 505px;
-    height: 700px;
+.event-container-img{
+    display: none;
 }
 
 .event-list {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    
 
-    border: 2px solid red;
+    a {
+        font-weight: 500;
+        text-transform: capitalize;
+        text-decoration: none;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 }
+
 
 .event-item {
     display: flex;
-    
     align-items: center;
     cursor: pointer;
-    border: 2px solid green;
-    width: 100%;
+    
+    width: 100vw;
+    max-width: 500px;
     font-family: 'Cormorant', 'serif';
-    font-size: 32px;
+    font-size: 16px;
     text-align: left;
 
     span {
         font-family: 'Cormorant', 'serif';
-        font-size: 80px;
+        font-size: 50px;
         padding-bottom: 25px;
     }
 
-    .event-item-mg{
-        margin-left: 50px;  
-        width: 350px;     
+    .event-item-mg {
+        margin-left: 50px;
+        width: 100%;
     }
 
-    img{
+    img {
         margin-left: 80px;
     }
 }
-
-.event-item.active {
-    .event-img {
-        animation: smooth-rotate 0.3s both;
-        
-    }
-    
-    @keyframes smooth-rotate {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(39deg);
-        }
-    }
-}
-
 
 
 .event-image {
@@ -85,6 +84,7 @@
     position: absolute;
     top: -20px;
     left: 10px;
+    display: none;
 }
 
 .event-image img {

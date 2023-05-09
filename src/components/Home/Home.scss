@@ -243,62 +243,9 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     //section choississez votre expérience
 
 
-    .container-choose-bg {
-        background-color: #24272A;
-    }
-
-    .container-choose {
-        display: flex;
-        flex-direction: column;
-        max-width: 1240px;
-        margin: 0 auto;
-        align-items: flex-end;
-    }
-
-    .choose-mariage {
-        max-width: 650px;
-        position: relative;
-        border: 2px solid red;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row-reverse;
-
-        font-family: 'Cormorant', 'serif';
-        background: $gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .choose-nb {
-        font-size: 80px;
-        padding-bottom: 30px
-    }
-
-    .choose-mariage-p{
-       
-        font-size: 32px;
-        padding: 5px;
-    }
-
-   
-    .image-hover-mariage {
-        position: absolute;
-        top:0px;
-        left: 0px;
-        opacity: 0;
-    }
-
-    .choose-mariage:hover .image-hover-mariage {
-        opacity: 1;
-    }
-
-    .choose-mariage:hover .golden-arrow {
-
-        transform: rotate(38deg);
-
-    }
+  .event-section-bg{
+    background-color: #24272A;
+  }
 
 }
 

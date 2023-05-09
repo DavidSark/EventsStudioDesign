@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.scss'
 // import myImage from './Image_Mariage.png'
-
+import EventSection from '../EventSection/EventSection'
 const Home = () => {
 
 
@@ -78,47 +78,10 @@ const Home = () => {
             </div>
 
 
-            <div id="mariage" className="container-choose-bg ">
 
-
-                <div className="container-choose">
-
-
-
-                    <div className='choose-mariage'>
-                        <img className='golden-arrow' src="./img/svg/golden-arrow.svg" alt="" />
-                        <p className='choose-mariage-p'>Mariage</p>
-                        <p className='choose-nb'>01.</p>
-                        
-                        
-
-                        <div className="container-choose-img">
-                            <img src='./img/mariage.png' alt="Mariage" className="image-hover-mariage" id='mariage' />
-                        </div>
-
-
-                    </div>
-                    
-                    <div className='choose-mariage'>
-                        <img className='golden-arrow' src="./img/svg/golden-arrow.svg" alt="" />
-                        <p className='choose-mariage-p'>Mariage</p>
-                        <p className='choose-nb'>01.</p>
-                        
-                        
-
-                        <div className="container-choose-img">
-                            <img src='./img/mariage.png' alt="Mariage" className="image-hover-mariage" id='mariage' />
-                        </div>
-
-
-                    </div>
-
-                </div>
+            <div className='event-section-bg'>
+                <EventSection />
             </div>
-
-
-
-
         </div>
 
     )
