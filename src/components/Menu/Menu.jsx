@@ -31,7 +31,7 @@ const Menu = () => {
                             Contact
                         </span>
                     </Link>
-                    <Link>
+                    <Link to="/event">
                         <span>
                             Boutique
                         </span>
