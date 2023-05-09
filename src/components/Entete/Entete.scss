@@ -1,0 +1,49 @@
+.entete {
+
+    background-color: #393C3F;
+    display: flex;
+    align-items: center;
+    padding: 15px 10px 15px 40px;
+
+
+    .bloc-social-icon {
+        
+        display: flex;
+        gap: 25px;
+
+
+        .social-icon {
+            height: 20px;
+        }
+    }
+
+    .tiktok {
+        height: 20px;
+    }
+
+    .separator {
+        width: 1px;
+        /* Largeur du trait de séparation */
+        height: 25px;
+        /* Hauteur du trait de séparation */
+        background-color: #ddd;
+        /* Couleur du trait de séparation */
+        margin: 0 30px;
+        /* Espace autour du trait de séparation */
+    }
+
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        color: #E7E7E7;
+    }
+
+
+    @media (max-width: 768px){
+     
+           display: none;
+       
+    }
+
+}
