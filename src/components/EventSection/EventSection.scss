@@ -2,8 +2,8 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
 
 .event-title-center {
-   
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -20,6 +20,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        padding: 0px 20px 0px 20px;
 
     }
 }
@@ -29,7 +30,6 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     align-items: center;
     justify-content: center;
     background-color: #24272A;
-    position: relative;
     max-width: 1240px;
     margin: 0 auto;
 }
@@ -43,7 +43,6 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     display: flex;
     flex-direction: column;
     align-items: center;
-
 
     a {
         font-weight: 500;
@@ -68,16 +67,16 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
 .container-event-item {
     margin-top: 50px;
+
     .event-item {
         display: flex;
         align-items: center;
         cursor: pointer;
 
         width: 80vw;
-        max-width: 500px;
+        max-width: 565px;
         font-family: 'Cormorant', 'serif';
         font-size: 16px;
-
 
         span {
             font-family: 'Cormorant', 'serif';
@@ -93,17 +92,27 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         img {
             margin-left: 80px;
         }
+
+    }
+
+    .event-item:hover .event-arrow {
+        animation: smooth-rotate .05s forwards;
+        transform-origin: center;
+    }
+    
+    @keyframes smooth-rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(40deg);
+        }
     }
 }
 
 
 .event-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+
     display: none;
 }
 
@@ -113,17 +122,27 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 }
 
 
-@media screen and (min-width:425px){
+@media screen and (min-width:425px) {
 
     .container-event-item {
-        
+
         .event-item {
-            font-size: 20px;  
+            font-size: 20px;
         }
     }
-    
+
 }
 
+@media screen and (min-width:433px) {
+    .event-title-underline {
+        background-color: $gradient;
+        width: 100%;
+        max-width: 400px;
+        height: 1px;
+        background-image: $gradient;
+        margin: 0 30px;
+    }
+}
 
 @media screen and (min-width:1024px) {
 
@@ -134,22 +153,43 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
             font-size: 32px;
             white-space: nowrap;
+        }
 
+        .event-title-underline {
+            background-color: $gradient;
+            width: 100%;
+            max-width: 600px;
+            height: 1px;
+            background-image: $gradient;
+            margin: 0 30px;
         }
 
     }
 
     .container-event-item {
         margin-top: 90px;
+
+        .event-item {
+            width: 35vw;
+            max-width: 445px;
+            font-size: 26px;
+        }
     }
 
     .event-container {
         align-items: flex-start;
+        padding-bottom: 40px;
+        gap: 75px;
     }
 
     .event-list {
+        width: 565px;
+        padding-right: 20px;
 
-        padding: 30px;
+        .container-event-item {
+            margin-top: 130px;
+
+        }
     }
 
     .event-item {
@@ -163,26 +203,104 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         img {
             margin-left: 0px;
         }
-
-
+       
     }
 
     .event-container-img {
         display: block;
-        width: 510px;
-        height: 710px;
-        border: 1px solid red;
+        margin-top: 120px;
+        width: 40vw;
+        max-width: 380px;
+        height: 510px;
+        border-style: solid;
+        border-width: 1px;
+        border-image: $gradient 1;
+        background-color: transparent;
+        position: relative;
+        margin-left: 20px;
     }
 
     .event-image {
-        display: block;
-        border: 1px solid green;
-        width: 510px;
-        height: 710px;
+        display: none;
+
+        width: 40vw;
+        max-width: 380px;
+        height: 510px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -12px;
+        left: 10px;
+
+        img {
+            width: 40vw;
+            max-width: 380px;
+            height: 510px;
+        }
     }
 
+
+
+}
+
+@media screen and (min-width:1240px) {
+
     .event-container {
+        gap: 140px;
+
+        .container-event-item {
+                 
+            .event-item {
+                width: 35vw;
+                max-width: 565px;
+                font-size: 26px;
+            }
+            .event-item {
+                font-size: 32px;
+
+                span {
+                    font-family: 'Cormorant', 'serif';
+                    font-size: 80px;
+                    padding-bottom: 28px;
+                }
+
+            }
+        }
+    }
+
+    .event-container-img {
+        display: block;
+        margin-top: 120px;
+        width: 40vw;
+        max-width: 510px;
+        height: 710px;
+        border-style: solid;
+        border-width: 1px;
+        border-image: $gradient 1;
+        background-color: transparent;
+        position: relative;
+        margin-left: 20px;
+    }
+
+    .event-image {
+        display: none;
+
+        width: 40vw;
+        max-width: 510px;
+        height: 710px;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -12px;
+        left: 10px;
+
+        img {
+            width: 40vw;
+            max-width: 510px;
+            height: 710px;
+        }
     }
 
 }

@@ -19,15 +19,18 @@ const EventList = () => {
             <div className="event-container">
 
                 <div className='event-container-img'>
-
+                    <div className="event-image">
+                        {selectedEvent && (
+                            <img src={`img/${selectedEvent.toLowerCase()}.png`} alt={selectedEvent} />
+                        )}
+                    </div>
                 </div>
-
-
 
                 <div className="event-list">
 
                     <div className="event-title-center">
                         <h2>Choississez votre expérience</h2>
+                        <div className="event-title-underline"></div>
                     </div>
 
                     <div className='container-event-item'>
@@ -43,18 +46,14 @@ const EventList = () => {
 
                                 <span>{`0${index + 1}.`}</span>
                                 <div className="event-item-mg">{event}</div>
-                                <img className='event-img' src="./img/svg/golden-arrow.svg" alt="" />
+                                <img className='event-arrow' src="./img/svg/golden-arrow.svg" alt="" />
 
 
                             </Link>
                         ))}
                     </div>
                 </div>
-                <div className="event-image">
-                    {selectedEvent && (
-                        <img src={`img/${selectedEvent.toLowerCase()}.png`} alt={selectedEvent} />
-                    )}
-                </div>
+
             </div>
         </div>
     );
