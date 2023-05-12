@@ -2,6 +2,8 @@ import React from 'react'
 import './Home.scss'
 // import myImage from './Image_Mariage.png'
 import EventSection from '../EventSection/EventSection'
+import GallerySection from '../GallerySection/GallerySection'
+import ContactForm from '../ContactForm/ContactForm'
 const Home = () => {
 
 
@@ -82,6 +84,9 @@ const Home = () => {
             <div className='event-section-bg'>
                 <EventSection />
             </div>
+
+            <GallerySection/>
+            <ContactForm/>
         </div>
 
     )

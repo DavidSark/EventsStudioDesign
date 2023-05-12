@@ -1,0 +1,213 @@
+//variable pour le dégradé :
+$gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, #F1EABA 19.12%, #F9F6CB 22.11%, #A77D46 49.09%, #F3EEA2 83.06%, #EEE495 86.06%, #E1CC75 90.05%, #CCA642 96.05%, #BF8E22 100.04%);
+//variable pour les boutons
+$black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
+
+
+.container-gallery {
+    position: relative;
+    margin-bottom: 40px;
+
+    .gallery {
+
+        .container-gallery-img-parent {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            .container-gallery-img {
+                margin-top: 30px;
+
+                img {
+                    width: 70vw;
+                    max-width: 400px;
+                }
+            }
+
+            .container-gallery-img-leaf {
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                top: 70px;
+
+                img {
+                    width: 200px;
+                }
+            }
+        }
+
+        .container-gallery-text-parent {
+            width: 100%;
+
+            .container-gallery-text {
+                padding: 20px;
+                max-width: 500px;
+                margin: auto;
+
+                .container-gallery-text-line {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .container-gallery-text-line {
+                    background-color: #24272A;
+                    width: 100%;
+                    height: 1px;
+                    margin: 30px 0px;
+
+                }
+
+                h2 {
+                    font-family: 'Cormorant', 'serif';
+                    font-weight: bold;
+
+                    color: #3A3A3A;
+                    margin-bottom: 20px;
+                    font-size: 25px;
+
+                }
+
+                p {
+                    font-family: 'Poppins', 'serif';
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 1.3;
+                    color: #3A3A3A;
+                }
+
+
+                .center-btn-gallery {
+                    display: flex;
+                    justify-content: center;
+
+                    .btn-gallery {
+                        font-family: 'Cormorant', 'serif';
+                        border-style: solid;
+                        border-width: 1px;
+                        background-color: transparent;
+                        border-image: $black-gradient 1;
+                        position: relative;
+                        padding: 10px 65px;
+                        transition: all 0.3s ease-in-out;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        margin: 30px 0px;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 3px;
+                            left: -6px;
+                            right: 3px;
+                            bottom: -6px;
+                            border-style: solid;
+                            border-width: 1px;
+                            border-image: $black-gradient 1;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        &:hover {
+                            &:before {
+                                transform: translate(4px, -4px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//media querie pour la section galerie
+@media screen and (min-width:1024px) {
+    .container-gallery-parent {
+        .container-gallery {
+            position: relative;
+
+            .background-gallery-img {
+                position: absolute;
+                background-color: #24272A;
+                height: 800px;
+                width: 50vw;
+                
+                max-width: 960px;
+                right: 0;
+                top: 70px;
+                z-index: -1;
+            }
+
+            .gallery {
+
+
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                max-width: 1240px;
+                margin: auto;
+                gap: 75px;
+              
+               
+                .container-gallery-img-parent {
+                    margin-top: 60px;
+
+                    .container-gallery-img {
+
+                     
+
+                        img {
+                            padding: 40px 0px 40px 0px;
+                            width: 40vw;
+                            max-width: 580px;
+                        }
+                    }
+
+                    .container-gallery-img-leaf {
+                        left: 0;
+                        top: 290px;
+
+                        img {
+
+                            width: 21vw;
+                        }
+                    }
+                }
+
+                .container-gallery-text-parent {
+                    padding-top: 80px;
+                    padding-left: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .container-gallery-text {
+                        max-width: 800px;
+                        margin: auto;
+                        // padding-right: 20px;
+                        padding: 0;
+
+                        .container-gallery-text-line {
+                            margin-bottom: 60px;
+                        }
+
+                        h2 {
+                            font-size: 32px;
+                            margin-bottom: 40px;
+                        }
+
+                        p {
+                            font-family: 'Poppins', 'serif';
+                            font-weight: 500;
+                            font-size: 15px;
+                        }
+
+                        .center-btn-gallery {
+                            margin: 40px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
