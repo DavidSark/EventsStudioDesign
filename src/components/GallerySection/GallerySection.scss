@@ -123,38 +123,37 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 //media querie pour la section galerie
 @media screen and (min-width:1024px) {
     .container-gallery-parent {
+
+
         .container-gallery {
             position: relative;
 
             .background-gallery-img {
                 position: absolute;
                 background-color: #24272A;
-                height: 800px;
-                width: 50vw;
-                
-                max-width: 960px;
+                width: 50%;
+                height: 85%;
                 right: 0;
-                top: 70px;
+                top: 90px;
+
                 z-index: -1;
             }
 
             .gallery {
-
-
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: center;
                 max-width: 1240px;
                 margin: auto;
                 gap: 75px;
-              
-               
+
+
                 .container-gallery-img-parent {
                     margin-top: 60px;
 
                     .container-gallery-img {
 
-                     
+
 
                         img {
                             padding: 40px 0px 40px 0px;
@@ -208,6 +207,28 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width:1240px) {
+    .container-gallery-parent {
+
+
+        .container-gallery {
+            position: relative;
+
+            .background-gallery-img {
+                position: absolute;
+                background-color: #24272A;
+                width: 50%;
+                height: 90%;
+                right: 0;
+                top: 90px;
+
+                z-index: -1;
+            }
+
         }
     }
 }
