@@ -141,9 +141,16 @@ form{
     select{
         background-color: transparent;
     }
+
+    select{
+        width: 40vw;
+        max-width: 160px;
+    }
+
     option{
         background-color: #E7E7E7;
     }
+
 }
 
 ::placeholder{
