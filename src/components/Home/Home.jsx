@@ -16,7 +16,7 @@ const Home = () => {
             <div className='container-home'>
 
                 <div className="container-img">
-                    <img className='' src="./img/image_home.png" alt="d'accueil" />
+                    <img className='resize-img' src="./img/image_home.png" alt="d'accueil" />
 
                     <div className="container-img-text">
                         <h1 className='title'>event's studio design</h1>

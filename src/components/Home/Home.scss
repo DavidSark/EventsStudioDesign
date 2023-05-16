@@ -10,15 +10,13 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 .container-home {
     background-image: linear-gradient(to bottom, #E7E7E7 10vh, #E7E7E7 0%, #24272A 0%, #24272A 60%);
     height: 100vh;
-    min-height: 580px;
     
 }
 
 //hauteur container-home écran plus grand
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
     .container-home{
-        border: 2px solid red;
-        min-height: 780px;
+ 
     }
     
 }
@@ -26,11 +24,12 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 .container-img {
     display: flex;
     flex-direction: column;
-    max-width: 1240px;
+    max-width: 800px;
     margin: auto;
     position: relative;
     margin-top: 20px;
-
+   
+    
     .container-img-text {
         position: absolute;
         top: 50%;
@@ -57,7 +56,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
         img {
             width: 15vw;
-            max-width: 200px;
+            max-width: 135px;
         }
     }
 }
@@ -73,7 +72,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         font-weight: bold;
         // font-size: 1rem;
         text-transform: uppercase;
-        margin: 40px 10px 10px 10px;
+        margin: 20px 10px 10px 10px;
         text-align: center;
         background: $gradient;
         -webkit-background-clip: text;
@@ -91,7 +90,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
         img {
             width: 110px;
-            margin: 30px 0px;
+            margin: 5px 0px;
         }
     }
 
@@ -101,12 +100,13 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-
+        
         border-style: solid;
         border-width: 1px;
         border-image: $gradient 1;
         background-color: transparent;
         position: relative;
+        margin: 20px 0px;
         padding: 10px 40px;
         transition: all 0.3s ease-in-out;
         font-size: 1rem;
@@ -152,21 +152,51 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 }
 
 //media pour bloqué le text h1 de l'accueil à 86px
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 728px) {
 
     .home {
         .container-img {
-
+            padding: 0px 20px;
             .container-img-text {
 
                 h1 {
-                    font-size: 86px;
+                    font-size:2.875rem;
                 }
 
             }
         }
     }
 }
+
+@media screen and (min-width:1024px) {
+    .container-home{
+      
+        max-height: 100vh;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .home {
+        .container-img {
+            max-width: 1240px;
+            padding: 0px 0px;
+            .container-img-text {
+
+                img {
+                    width: 15vw;
+                    max-width: 200px;
+                }
+                h1 {
+                    font-size:5.375rem;
+                }
+
+            }
+        }
+    
+}
+}
+
+
 
 //media pour adapté le titre h2
 @media screen and (min-width: 425px) {
@@ -183,33 +213,66 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 }
 
-@media screen and (min-width: 728px) {
 
-    .home {
-        .container-text {
 
-            h2 {
-                font-size: 2.25rem;
-            }
-        }
-    }
 
-}
+
+
+
+
+
+
+
+
+
+
+
+// @media screen and (min-width: 728px) {
+
+//     .home {
+//         .container-text {
+
+//             h2 {
+//                 font-size: 1.75rem;
+//             }
+//         }
+//     }
+
+// }
 
 //media pour le bouton découvrir
-@media screen and (min-width:768px) {
-    .home {
-        .container-home {
-            .container-text {
-                .container-discover {
-                    .btn-decouvrir {
-                        font-size: 24px;
-                    }
-                }
-            }
-        }
-    }
-}
+// @media screen and (min-width:768px) {
+//     .home {
+//         .container-home {
+//             .container-text {
+//                 .container-discover {
+//                     .btn-decouvrir {
+//                         font-size: 24px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //media pour le gradient de l'accueil
 @media screen and (min-width: 375px) {
@@ -228,13 +291,13 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .home {
-        .container-home {
-            background-image: linear-gradient(to bottom, #E7E7E7 32vh, #E7E7E7 0%, #24272A 0%, #24272A 50%)
-        }
-    }
-}
+// @media screen and (min-width: 1024px) {
+//     .home {
+//         .container-home {
+//             background-image: linear-gradient(to bottom, #E7E7E7 32vh, #E7E7E7 0%, #24272A 0%, #24272A 50%)
+//         }
+//     }
+// }
 
 @media screen and (min-width: 1440px) {
     .home {
@@ -246,24 +309,3 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 
 
-// @media screen and (min-width: 768px) {
-
-//     .home {
-//         .container-home {
-
-//                 height: 72vh;
-
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 1440px) {
-
-//     .home {
-//         .container-home {
-
-//                 height: 70vh;
-//             }
-
-//     }
-// }

@@ -1,6 +1,8 @@
 $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, #F1EABA 19.12%, #F9F6CB 22.11%, #A77D46 49.09%, #F3EEA2 83.06%, #EEE495 86.06%, #E1CC75 90.05%, #CCA642 96.05%, #BF8E22 100.04%);
 
-
+.event-container-parent{
+    background-color: #24272A;
+}
 .event-title-center {
     display: flex;
     flex-direction: column;
