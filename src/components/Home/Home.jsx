@@ -4,6 +4,7 @@ import './Home.scss'
 import EventSection from '../EventSection/EventSection'
 import GallerySection from '../GallerySection/GallerySection'
 import ContactForm from '../ContactForm/ContactForm'
+import DescriptionSection from '../DescriptionSection/DescriptionSection'
 const Home = () => {
 
 
@@ -15,7 +16,7 @@ const Home = () => {
             <div className='container-home'>
 
                 <div className="container-img">
-                    <img className='img-resize' src="./img/image_home.png" alt="d'accueil" />
+                    <img className='' src="./img/image_home.png" alt="d'accueil" />
 
                     <div className="container-img-text">
                         <h1 className='title'>event's studio design</h1>
@@ -41,43 +42,7 @@ const Home = () => {
             </div>
 
 
-            <div className="desc" >
-
-                <div className="container-desc">
-                    <div className="test2">
-                        <div className="container-desc-img">
-                            <img src="./img/img_desc.png" alt="" />
-                        </div>
-
-
-                        <div className="container-desc-img-leaf">
-                            <img src="./img/leaf_deco.png" alt="" />
-                        </div>
-                    </div>
-
-                    <div className="test3">
-                        <div className="container-desc-text">
-                            <div className="container-desc-text-line"></div>
-                            <h2>Qui suis-je ?</h2>
-                            <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.</p> <br /><br /><br />
-
-                            <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.
-                                Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet </p>
-
-
-                            <div className="center-btn-desc">
-                                <button className='btn-desc'>
-                                    <p>Lorem</p>
-                                </button>
-                            </div>
-
-                            <div className="container-desc-text-line"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+            <DescriptionSection/>
 
 
 
