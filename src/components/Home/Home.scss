@@ -238,7 +238,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 }
 
 @media screen and (min-width:1536px) {
-    .home {    
+    .home {
         .container-text {
           
             h2 {
@@ -261,7 +261,26 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 
 
+/*Media queries pour la hauteur des écrans*/
 
+//tablette 
+@media (min-height: 400px) and (max-height: 600px) {
+    .home {
+        .container-home {
+            height: calc(100vh + 200px);
+            
+        }
+    }
+}
+
+
+@media (min-height: 710px) and (max-height: 800px) {
+    .home {
+        .container-home {
+            height: calc(100vh + 100px);
+        }
+    }
+}
 
 
 // @media screen and (min-width: 728px) {
