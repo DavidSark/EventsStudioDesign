@@ -15,9 +15,7 @@ const EventList = () => {
 
     return (
         <div className='event-container-parent'>
-
             <div className="event-container">
-
                 <div className='event-container-img'>
                     <div className="event-image">
                         {selectedEvent && (

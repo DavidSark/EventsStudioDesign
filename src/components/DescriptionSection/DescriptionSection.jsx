@@ -5,7 +5,7 @@ const DescriptionSection = () => {
     <div className="desc" >
 
                 <div className="container-desc">
-                    <div className="test2">
+                    <div className="container-desc-img-parent">
                         <div className="container-desc-img">
                             <img src="./img/img_desc.png" alt="" />
                         </div>
@@ -16,7 +16,7 @@ const DescriptionSection = () => {
                         </div>
                     </div>
 
-                    <div className="test3">
+                    <div className="container-desc-text-parent">
                         <div className="container-desc-text">
                             <div className="container-desc-text-line"></div>
                             <h2>Qui suis-je ?</h2>

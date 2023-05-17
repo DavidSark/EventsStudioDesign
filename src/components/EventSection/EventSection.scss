@@ -10,7 +10,8 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     align-items: center;
     text-align: center;
     align-self: center;
-    margin-top: 50px;
+    margin-top: 60px;
+    
 
     h2 {
         font-size: 25px;
@@ -34,6 +35,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     background-color: #24272A;
     max-width: 1240px;
     margin: 0 auto;
+    padding-bottom: 60px;
 }
 
 .event-container-img {
@@ -127,7 +129,6 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 @media screen and (min-width:425px) {
 
     .container-event-item {
-
         .event-item {
             font-size: 20px;
         }
@@ -147,12 +148,8 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 }
 
 @media screen and (min-width:1024px) {
-
-
     .event-title-center {
-
         h2 {
-
             font-size: 32px;
             white-space: nowrap;
         }
@@ -170,7 +167,6 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
     .container-event-item {
         margin-top: 90px;
-
         .event-item {
             width: 35vw;
             max-width: 445px;
@@ -187,7 +183,6 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     .event-list {
         width: 565px;
         padding-right: 20px;
-
         .container-event-item {
             margin-top: 130px;
 
@@ -196,24 +191,21 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
     .event-item {
         font-size: 24px;
-
         span {
             font-size: 60px;
             padding-bottom: 20px;
         }
-
         img {
             margin-left: 0px;
         }
        
     }
-
     .event-container-img {
         display: block;
         margin-top: 120px;
         width: 40vw;
-        max-width: 380px;
-        height: 510px;
+        max-width: 280px;
+        height: 400px;
         border-style: solid;
         border-width: 1px;
         border-image: $gradient 1;
@@ -221,13 +213,11 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         position: relative;
         margin-left: 20px;
     }
-
     .event-image {
         display: none;
-
         width: 40vw;
-        max-width: 380px;
-        height: 510px;
+        max-width: 280px;
+        height: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -237,8 +227,8 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
         img {
             width: 40vw;
-            max-width: 380px;
-            height: 510px;
+            max-width: 280px;
+            height: 400px;
         }
     }
 
@@ -246,7 +236,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
 }
 
-@media screen and (min-width:1240px) {
+@media screen and (min-width:1440px) {
 
     .event-container {
         gap: 140px;
