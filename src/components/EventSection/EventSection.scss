@@ -184,7 +184,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         width: 565px;
         padding-right: 20px;
         .container-event-item {
-            margin-top: 130px;
+            margin-top: 80px;
 
         }
     }
@@ -265,8 +265,8 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         display: block;
         margin-top: 120px;
         width: 40vw;
-        max-width: 510px;
-        height: 710px;
+        max-width: 370px;
+            height: 540px;
         border-style: solid;
         border-width: 1px;
         border-image: $gradient 1;
@@ -279,8 +279,8 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         display: none;
 
         width: 40vw;
-        max-width: 510px;
-        height: 710px;
+        max-width: 370px;
+        height: 540px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -290,8 +290,8 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
         img {
             width: 40vw;
-            max-width: 510px;
-            height: 710px;
+            max-width: 370px;
+            height: 540px;
         }
     }
 
