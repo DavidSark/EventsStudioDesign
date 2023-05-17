@@ -10,16 +10,17 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 .container-home {
     background-image: linear-gradient(to bottom, #E7E7E7 10vh, #E7E7E7 0%, #24272A 0%, #24272A 60%);
     height: 100vh;
-    
+   
 }
 
 //hauteur container-home écran plus grand
-@media screen and (min-width:768px) {
-    .container-home{
- 
-    }
+// @media screen and (min-width:1536px) {
+//     .container-home{
+       
+//         height: calc(100vh - 150px);
+//     }
     
-}
+// }
 
 .container-img {
     display: flex;
@@ -140,10 +141,6 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         margin: 0 30px;
     }
 
-
-
-
-
     //section choississez votre expérience
     .event-section-bg {
         background-color: #24272A;
@@ -153,27 +150,19 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 //media pour bloqué le text h1 de l'accueil à 86px
 @media screen and (min-width: 728px) {
-
     .home {
         .container-img {
             padding: 0px 20px;
             .container-img-text {
-
                 h1 {
                     font-size:2.875rem;
                 }
-
             }
         }
     }
 }
 
-@media screen and (min-width:1024px) {
-    .container-home{
-      
-        max-height: 100vh;
-    }
-}
+
 
 @media screen and (min-width:1440px) {
     .home {
@@ -181,7 +170,6 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
             max-width: 1240px;
             padding: 0px 0px;
             .container-img-text {
-
                 img {
                     width: 15vw;
                     max-width: 200px;
@@ -189,37 +177,86 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
                 h1 {
                     font-size:5.375rem;
                 }
-
             }
         }
-    
 }
 }
 
 
 
-//media pour adapté le titre h2
+/*  --------------------------------
+    media pour adapté le titre h2 & btn découvrir
+    ----------------------------------
+*/
 @media screen and (min-width: 425px) {
-
     .home {
         .container-text {
-
             h2 {
-
                 font-size: 1.25rem;
             }
         }
     }
+}
 
+@media screen and (min-width:768px) {
+    .home {    
+        .container-text {
+            h2 {
+                font-size: 1.5rem;
+            }
+            .container-discover{
+
+                img{
+                    margin: 30px 0px;
+                }
+                .btn-decouvrir{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
 }
 
 
+@media screen and (min-width:768px) {
+    .home {    
+        .container-text {
+            h2 {
+                font-size: 1.5rem;
+            }
+            .container-discover{
 
+                img{
+                    margin: 30px 0px;
+                }
+                .btn-decouvrir{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
 
+@media screen and (min-width:1024px) {
+    .home {    
+        .container-text {
+          
+            h2 {
+                font-size:2.25rem;
+                max-width: 800px;
+            }
+            .container-discover{
 
-
-
-
+                img{
+                    margin: 30px 0px;
+                }
+                .btn-decouvrir{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -228,16 +265,13 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 
 // @media screen and (min-width: 728px) {
-
 //     .home {
 //         .container-text {
-
 //             h2 {
 //                 font-size: 1.75rem;
 //             }
 //         }
 //     }
-
 // }
 
 //media pour le bouton découvrir
@@ -254,22 +288,6 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 //         }
 //     }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
