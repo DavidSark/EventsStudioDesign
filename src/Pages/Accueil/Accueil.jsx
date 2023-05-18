@@ -18,7 +18,7 @@ const Accueil = () => {
       <Menu />
 
       <Home />
-      
+      <Footer/>
 
       
      
