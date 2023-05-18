@@ -4,7 +4,7 @@ import React from 'react'
 import Entete from '../../components/Entete/Entete'
 import Menu from '../../components/Menu/Menu'
 import Home from '../../components/Home/Home'
-// import Footer from '../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer'
 // import ContactForm from '../components/ContactForm/ContactForm'
 
 
@@ -18,7 +18,7 @@ const Accueil = () => {
       <Menu />
 
       <Home />
-
+      
 
       
      
