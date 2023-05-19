@@ -1,6 +1,6 @@
 import React from 'react'
 import './ContactForm.scss'
-
+import { HashLink as Link } from 'react-router-hash-link';
 const ContactForm = () => {
   return (
     <div className='container-form-parent'>
@@ -20,21 +20,29 @@ const ContactForm = () => {
             </div>
             <div className="mail">
               <img src="./img/svg/mail.svg" alt="mail icon" />
-              <p>adressemail@gmail.com</p>
+              <a href="mailto:evensstudiodesign@outlook.fr">
+                <p>evensstudiodesign@outlook.fr</p>
+              </a>
             </div>
           </div>
           <div className="container-form-reseau-icon">
             <div className="container-form-fb">
               <img src="./img/svg/facebook-black.svg" alt="facebook icon" className="social-icon" />
-              <p>facebook</p>
+              <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank'>
+                <p>facebook</p>
+              </Link>
             </div>
             <div className="container-form-instagram">
               <img src="./img/svg/instagram-black.svg" alt="instagram icon" className="social-icon" />
-              <p>instagram</p>
+              <Link to="https://www.instagram.com/eventsstudiodesign/" target='_blank'>
+                <p>instagram</p>
+              </Link>
             </div>
             <div className="container-form-tiktok">
               <img src="./img/svg/tiktok-black.svg" alt="tiktok icon" className="tiktok" />
-              <p>tiktok</p>
+              <Link to="https://www.tiktok.com/@eventsstudiodesign" target='_blank'>
+                <p>tiktok</p>
+              </Link>
             </div>
           </div>
         </div>
