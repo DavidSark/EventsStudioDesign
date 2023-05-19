@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom'
 import React from 'react'
 import './Footer.scss'
+
+import { HashLink as Link } from 'react-router-hash-link';
+
 const Footer = () => {
     return (
         <div className='footer'>
@@ -12,7 +14,12 @@ const Footer = () => {
                         <p>décoratrice événementielle basé à Reims et dans le Grand Est</p>
                         <p>adresse</p>
                         <p>07 85 75 09 19</p>
-                        <p>exemple@exemple.fr</p>
+                        <a href='mailto:eventsstudiodesign@outlook.fr'>
+                            <p>
+                                eventsstudiodesign@outlook.fr
+                            </p>
+                        </a>
+
                     </div>
                 </div>
 
@@ -49,15 +56,15 @@ const Footer = () => {
 
                             <div className="link-social">
                                 <p>Réseaux</p>
-                                <Link>facebook</Link>
-                                <Link>instagram</Link>
-                                <Link>tiktok</Link>
+                                <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank'>facebook</Link>
+                                <Link to="https://www.instagram.com/eventsstudiodesign/" target='_blank'>instagram</Link>
+                                <Link to="https://www.tiktok.com/@eventsstudiodesign" target='_blank'>tiktok</Link>
                             </div>
                         </div>
 
                     </div>
 
-                   
+
                 </div>
             </div>
 

@@ -1,5 +1,7 @@
 import React from 'react'
 import './DescriptionSection.scss'
+import { HashLink as Link } from 'react-router-hash-link';
+
 const DescriptionSection = () => {
   return (
     <div className="desc" >
@@ -27,9 +29,9 @@ const DescriptionSection = () => {
 
 
                             <div className="center-btn-desc">
-                                <button className='btn-desc'>
+                                <Link to="/#contact" className='btn-desc'>
                                     <p>Lorem</p>
-                                </button>
+                                </Link>
                             </div>
 
                             <div className="container-desc-text-line"></div>

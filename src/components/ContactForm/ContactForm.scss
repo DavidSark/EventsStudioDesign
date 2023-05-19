@@ -130,6 +130,10 @@
 form {
     display: flex;
     flex-direction: column;
+
+    button{
+        cursor: pointer;
+    }
 }
 
 .form-prenom,

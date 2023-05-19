@@ -8,13 +8,20 @@ const Entete = () => {
   return (
     <div className='entete'>
       <div className='bloc-social-icon'>
-        <img src="/img/svg/facebook.svg" alt="Facebook icon" className="social-icon" />
-        <img src="/img/svg/instagram.svg" alt="Instagram icon" className="social-icon" />
-        <img src="/img/svg/tiktok.svg" alt="Tiktok icon" className="tiktok" />
+        <a href="https://www.facebook.com/profile.php?id=100063230651252" target='_blank'>
+          <img src="/img/svg/facebook.svg" alt="Facebook icon" className="social-icon" />
+        </a>
+
+        <a href="https://www.instagram.com/eventsstudiodesign/" target='_blank'>
+          <img src="/img/svg/instagram.svg" alt="Instagram icon" className="social-icon" />
+        </a>
+        <a href="https://www.tiktok.com/@eventsstudiodesign" target='_blank'>
+          <img src="/img/svg/tiktok.svg" alt="Tiktok icon" className="tiktok" />
+        </a>
       </div>
       <div className="separator"></div>
       <div className="entete-email">
-        <h2>adressemail@mail.com</h2>
+        <a href="mailto:evensstudiodesign@outlook.fr"><h2>evensstudiodesign@outlook.fr</h2></a>
       </div>
       <div className="separator"></div>
       <div className="entete-phone">

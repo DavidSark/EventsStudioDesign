@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './Menu.scss';
-import { Link } from 'react-router-dom';
+
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,12 +20,12 @@ const Menu = () => {
         </Link>
         <nav ref={navRef} className={isMenuOpen ? 'responsive_nav' : ''}>
           <Link to="/prestations">Prestations</Link>
-          <Link>Galerie</Link>
-          <Link>L'entreprise</Link>
-          <Link>
+          <Link to="/galerie">Galerie</Link>
+          <Link to="/#entreprise">L'entreprise</Link>
+          <Link to="/#contact">
             <span>Contact</span>
           </Link>
-          <Link to="/event">
+          <Link to="">
             <span>Boutique</span>
           </Link>
           <button

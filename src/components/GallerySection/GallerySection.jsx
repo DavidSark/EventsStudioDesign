@@ -1,5 +1,6 @@
 import React from 'react'
 import './GallerySection.scss'
+import { HashLink as Link } from 'react-router-hash-link';
 
 const GallerySection = () => {
     return (
@@ -32,9 +33,9 @@ const GallerySection = () => {
 
 
                             <div className="center-btn-gallery">
-                                <button className='btn-gallery'>
+                                <Link to="/galerie" className='btn-gallery'>
                                     <p>Lorem</p>
-                                </button>
+                                </Link>
                             </div>
                             <div className="container-gallery-text-line"></div>
 

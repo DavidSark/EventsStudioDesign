@@ -87,6 +87,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 
     .btn-decouvrir {
+        cursor: pointer;
         font-family: 'Cormorant', 'serif';
         background: $gradient;
         -webkit-background-clip: text;

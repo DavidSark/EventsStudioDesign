@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom/client';
 import Accueil from '../src/Pages/Accueil/Accueil';
 import Prestations from '../src/Pages/Prestations/Prestations';
 import EventSection from './components/EventSection/EventSection';
-
-
+import Galerie from './Pages/Galerie/Galerie';
 
 
 //import du router
@@ -14,6 +13,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 
 
 
@@ -27,6 +27,11 @@ const router = createBrowserRouter([
   {
     path: "/prestations",
     element: <Prestations/>,
+  },
+
+  {
+    path: "/galerie",
+    element: <Galerie/>,
   },
 
   {

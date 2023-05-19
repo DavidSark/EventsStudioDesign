@@ -16,12 +16,8 @@ const Accueil = () => {
     <div className='global'>
       <Entete />
       <Menu />
-
       <Home />
       <Footer/>
-
-      
-     
     </div>
   )
 }

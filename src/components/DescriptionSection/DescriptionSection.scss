@@ -69,6 +69,8 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
                     justify-content: center;
 
                     .btn-desc {
+                        cursor: pointer;
+                        text-decoration: none;
                         font-family: 'Cormorant', 'serif';
                         border-style: solid;
                         border-width: 1px;
