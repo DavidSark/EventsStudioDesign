@@ -54,6 +54,12 @@
 
 }
 
+.mail{
+    a{
+        text-decoration: none;
+        color: #3A3A3A;
+    }
+}
 .phone,
 .mail {
     gap: 10px;
@@ -75,6 +81,9 @@
     gap: 20px;
     padding: 0px 20px;
 
+    a{
+        text-decoration: none;
+    }
     p {
         font-family: 'Poppins', 'serif';
         color: #3A3A3A;

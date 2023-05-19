@@ -14,7 +14,7 @@ const DescriptionSection = () => {
 
 
                         <div className="container-desc-img-leaf">
-                            <img src="./img/leaf_deco.png" alt="" />
+                            <img src="./img/leaf_deco.png" alt="feuille déco" />
                         </div>
                     </div>
 

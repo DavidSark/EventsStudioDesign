@@ -5,6 +5,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 .desc {
     position: relative;
+    z-index: 1;
     margin-bottom: 60px;
     .container-desc {
         .container-desc-img-parent {
@@ -23,7 +24,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
                 z-index: -1;
                 left: 0;
                 top: 70px;
-
+               
                 img {
                     width: 200px;
                 }

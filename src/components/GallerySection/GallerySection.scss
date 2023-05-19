@@ -7,7 +7,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 .container-gallery {
     position: relative;
     margin-bottom: 40px;
-
+    z-index: 1;
     .gallery {
         margin-top: 40px;
         .container-gallery-img-parent {
