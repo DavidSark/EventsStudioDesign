@@ -4,6 +4,9 @@ import React from 'react'
 import Entete from '../../components/Entete/Entete'
 import Menu from '../../components/Menu/Menu'
 import PrestationMariage from '../../components/PrestationMariage/PrestationMariage'
+import PrestationAnniversaire from '../../components/PrestationAnniversaire/PrestationAnniversaire'
+import PrestationGender from '../../components/PrestationGender/PrestationGender'
+import PrestationReligion from '../../components/PrestationReligion/PrestationReligion'
 //import feuille de style
 import '../Global.scss'
 import './Prestations.scss'
@@ -11,6 +14,7 @@ import './Prestations.scss'
 
 import { HashLink as Link } from 'react-router-hash-link';
 import ContactForm from '../../components/ContactForm/ContactForm'
+
 const Prestations = () => {
     return (
         <div className='prestation-main-container'>
@@ -23,7 +27,7 @@ const Prestations = () => {
                 </div>
                 <div className="prestations-title-tagline">
                     <h2>
-                        Cotton candy muffin cupcake
+                        Cotton candy muffin cupcake <br />
                         sugar plum marzipan pie donut cotton candy.
                     </h2>
                 </div>
@@ -38,7 +42,9 @@ const Prestations = () => {
                 </div>
 
                 <PrestationMariage />
-
+                <PrestationAnniversaire />
+                <PrestationGender />
+                <PrestationReligion/>
                 <div id="contact-prestation">
                     <ContactForm />
                 </div>

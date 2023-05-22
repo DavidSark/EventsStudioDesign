@@ -1,11 +1,11 @@
 $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
-.container-prestation-parent {
+.container-prestation-parent-gender {
     position: relative;
     max-width: 800px;
     margin: 0 auto ;
 
-    .line-prestation-separation{
+    .line-prestation-separation-gender{
        
         width: 100%;
         max-width: 800px;
@@ -20,7 +20,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 }
 
-.prestation-title-01 {
+.prestation-title-03 {
     margin-top: 40px;
     padding: 0 20px;
     display: flex;
@@ -47,7 +47,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 }
 
-.prestation-line-01 {
+.prestation-line-03 {
     width: 20%;
     height: 1px;
     background-color: #3A3A3A;
@@ -67,7 +67,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 }
 
-.prestation-img-center {
+.prestation-img-center-gender {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -79,7 +79,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 }
 
-.prestation-tagline-text-01 {
+.prestation-tagline-text-03 {
     margin: 40px 0px;
     padding: 0 20px;
 
@@ -92,7 +92,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 }
 
-.prestation-text-01 {
+.prestation-text-03 {
     margin-top: 20px;
     padding: 0 20px;
 
@@ -105,7 +105,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 }
 
-.prestation-center-btn-desc {
+.prestation-center-btn-desc-gender {
     display: flex;
     justify-content: center;
 
@@ -145,15 +145,15 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     }
 }
 
-.prestation-img-right {
+.prestation-img-right-gender {
     display: none;
 }
 
-.container-line-center{
+.container-line-center-gender{
 display: flex;
 justify-content: center;
 }
-.line-prestation-separation{
+.line-prestation-separation-gender{
     width: 100vw;
     margin: 20px 20px 50px 20px;
     max-width: 800px;
@@ -161,16 +161,16 @@ justify-content: center;
     background-color: #3A3A3A;
 }
 @media screen and (min-width:600px) {
-    .container-prestation-parent {
+    .container-prestation-parent-gender {
         display: flex;
     }
 
 
-    .prestation-img-center {
+    .prestation-img-center-gender {
         display: none;
     }
 
-    .prestation-img-right {
+    .prestation-img-right-gender {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -183,31 +183,31 @@ justify-content: center;
         }
     }
 
-    .prestation-center-btn-desc {
+    .prestation-center-btn-desc-gender {
         display: flex;
         justify-content: start;
     }
 }
 
 @media screen and (min-width:728px) {
-    .container-prestation-parent {
+    .container-prestation-parent-gender {
         padding: 0 20px;
     }
 
 }
 
 @media screen and (min-width:728px) {
-    .container-prestation-parent {
+    .container-prestation-parent-gender {
         margin-bottom: 40px;
     }
 
-    .prestation-title-01,
-    .prestation-tagline-text-01,
-    .prestation-text-01 {
+    .prestation-title-03,
+    .prestation-tagline-text-03,
+    .prestation-text-03 {
         padding: 0;
     }
 
-    .prestation-img-right {
+    .prestation-img-right-gender {
         img {
             margin-top: 125px;
             padding: 0 0 0 20px;
@@ -217,7 +217,7 @@ justify-content: center;
 
 @media screen and (min-width:1024px) {
 
-    .prestation-title-01 {
+    .prestation-title-03 {
            
         h2 {
             font-size: 2rem;
@@ -241,14 +241,14 @@ justify-content: center;
 
 @media screen and (min-width:1440px) {
 
-    .container-prestation-parent {
+    .container-prestation-parent-gender {
         max-width: 1240px;
         margin: 0 auto;
         justify-content: space-between;
         padding: 0;
     }
 
-    .prestation-img-right {
+    .prestation-img-right-gender {
        
         img {
             width: 35vw;
@@ -256,7 +256,7 @@ justify-content: center;
         }
     }
 
-    .prestation-title-01 {
+    .prestation-title-03 {
         margin-top: 100px;
         h2 {
             font-size: 2rem;
@@ -273,21 +273,21 @@ justify-content: center;
         }
     }
 
-    .prestation-tagline-text-01 {
+    .prestation-tagline-text-03 {
         p {
             font-size: 3.75rem;
             line-height: 1.2;
         }
     }
 
-    .prestation-text-01 {
+    .prestation-text-03 {
         p {
             max-width: 650px;
             font-size: 0.9375rem;
         }
     }
 
-    .line-prestation-separation{
+    .line-prestation-separation-gender{
         width: 100vw;
         margin: 60px ;
         max-width: 1240px;

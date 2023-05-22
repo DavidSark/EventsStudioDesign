@@ -35,7 +35,7 @@ const EventList = () => {
                         {events.map((event, index) => (
                             <Link
                                 key={index}
-                                to={`/#${event.toLowerCase()}`}
+                                to={`/prestations#${event.toLowerCase()}`}
                                 className={`event-item ${selectedEvent === event ? 'active' : ''}`}
                                 onMouseEnter={() => handleEventHover(event)}
                                 onMouseLeave={() => handleEventHover(null)}>
