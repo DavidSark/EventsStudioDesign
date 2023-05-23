@@ -9,7 +9,7 @@ const PrestationMariage = () => {
         <div className='prestation-title-01'  >
           <img src="../img/01.png" alt="" />
           <div className="prestation-line-01"></div>
-          <h2 id='gender'>Mariage</h2>
+          <h2 id='mariage'>Mariage</h2>
         </div>
         <div className="prestation-tagline-text-001">
           <p>

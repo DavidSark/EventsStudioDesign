@@ -9,7 +9,7 @@ const PrestationReligion = () => {
                     <div className='prestation-title-04'>
                         <img src="../img/04.png" alt="" />
                         <div className="prestation-line-04"></div>
-                        <h2 id='anniversaire'>Religion & Foi</h2>
+                        <h2 id='religion'>Religion & Foi</h2>
                     </div>
                     <div className="prestation-tagline-text-04">
                         <p>
