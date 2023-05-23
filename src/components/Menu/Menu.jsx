@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './Menu.scss';
 
 import { HashLink as Link } from 'react-router-hash-link';
@@ -9,30 +9,44 @@ const Menu = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.body.style.overflow = isMenuOpen ? '' : 'hidden';
   };
+
+  const handleClick = () => {
+    window.scroll(0, 0); // Défilement de la page vers le haut
+    setIsMenuOpen(false); // Fermeture du menu
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsMenuOpen(false);
+      document.body.style.overflow = '';
+    };
+
+    window.addEventListener('hashchange', handleRouteChange);
+    return () => {
+      window.removeEventListener('hashchange', handleRouteChange);
+    };
+  }, []);
 
   return (
     <div className="menu-parent">
       <div className="menu">
-        <Link to="/" onClick={() => {
-          window.scroll(0, 0);
-        }}>
+        <Link to="/" onClick={handleClick}>
           <img className="logo" src="/img/svg/ESD_Logo.svg" alt="" />
         </Link>
         <nav ref={navRef} className={isMenuOpen ? 'responsive_nav' : ''}>
-          <Link to="/prestations" onClick={() => {
-            window.scroll(0, 0);
-          }}>Prestations</Link>
-          <Link to="/galerie" onClick={() => {
-          window.scroll(0, 0);
-        }}>Galerie</Link>
-          <Link to="/#entreprise" onClick={() => {
-          window.scroll(0, 0);
-        }}>L'entreprise</Link>
-          <Link to="/#contact"onClick={() => {
-          window.scroll(0, 0);
-        }}>
+          <Link to="/prestations" onClick={handleClick}>Prestations</Link>
+          <Link to="/galerie" onClick={handleClick}>Galerie</Link>
+          <Link to="/#entreprise" onClick={handleClick}>L'entreprise</Link>
+          <Link to="/#contact" onClick={handleClick}>
             <span>Contact</span>
           </Link>
           <Link to="">
