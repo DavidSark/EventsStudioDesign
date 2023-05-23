@@ -156,6 +156,13 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 
 
+
+//*******Début media queries*******
+
+/*  --------------------------------
+    Media querie pour adapter l'image au centre à 1440px
+    --------------------------------
+*/
 @media screen and (min-width:1440px) {
     .home {
         .container-img {
@@ -174,7 +181,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 }
 }
 
-//*******Début media queries*******
+
 
 
 /*  --------------------------------
@@ -235,6 +242,28 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         }
     }
 }
+
+
+@media screen and (min-width:1024px) {
+    .home {    
+        .container-text {
+            h2 {
+                max-width: 1240px;
+                font-size: 3rem;
+            }
+            .container-discover{
+
+                img{
+                    margin: 30px 0px;
+                }
+                .btn-decouvrir{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
 
 @media screen and (min-width:1536px) {
     .home {
