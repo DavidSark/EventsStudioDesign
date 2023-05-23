@@ -1,40 +1,184 @@
+$black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
+
+.prestations-title-gallery{
+
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    gap: 20px;
+    padding: 0px 20px;
+     margin: 50px auto 20px ;
+    .prestations-line-gallery{
+        width: 30%;
+        max-width: 220px;
+        height: 1px;
+        background-color: #3A3A3A;
+    }
+    h2{
+        font-family: 'Cormorant', 'serif';
+        font-weight: bold;
+        color: #3A3A3A;
+        font-size: 1.5625rem;
+        text-transform: uppercase;
+        
+    }
+}
+
+.prestations-title-tagline-gallery{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    h2{
+        margin-bottom: 20px;
+        font-family: 'Cormorant', 'serif';
+        font-weight: 600;
+        color: #3A3A3A;
+        font-size:1.25rem;
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.14);
+    }
+}
+
+
+
 .instagram-feed {
-    max-width: 1200px;
-    margin: 10px auto;
-  }
-  
-  .instagram-grid {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.instagram-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .instagram-item {
-    overflow: hidden;
-  }
-  
-  .instagram-item img, video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+    grid-gap: 50px;
+    max-width: 800px;
+ 
+}
 
-  
-  .instagram-load-more {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #1e90ff;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .instagram-load-more:hover {
-    background-color: #fff;
-    color: #1e90ff;
-  }
-  
+.instagram-item {
+    overflow: hidden;
+}
+
+.instagram-item {
+    margin: 0 20px;
+    
+    img,
+    video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+}
+}
+
+.center-btn-gallery-load-more {
+    display: flex;
+    justify-content: center;
+
+    .btn-gallery-loaf-more {
+        cursor: pointer;
+        text-decoration: none;
+        font-family: 'Cormorant', 'serif';
+        border-style: solid;
+        border-width: 1px;
+        background-color: transparent;
+        border-image: $black-gradient 1;
+        position: relative;
+        padding: 10px 65px;
+        transition: all 0.3s ease-in-out;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 30px 0px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: -6px;
+            right: 3px;
+            bottom: -6px;
+            border-style: solid;
+            border-width: 1px;
+            border-image: $black-gradient 1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            &:before {
+                transform: translate(4px, -4px);
+            }
+        }
+    }
+}
+
+
+//media queries : 
+@media screen and (min-width:728px) {
+
+    .prestations-title-gallery{
+        
+        h2{
+         font-size: 3rem;
+        }
+    }
+
+    .prestations-title-tagline-gallery{
+     
+        h2{
+            font-size: 2.25rem;
+        }
+    }
+}
+
+@media screen and (min-width:820px) {
+    .instagram-item{
+        margin: 0 ;
+    }
+}
+
+@media screen and (min-width:1024px) {
+ 
+    
+    .prestations-title-gallery{
+        
+        h2{
+         font-size: 3rem;
+        }
+    }
+
+    .prestations-title-tagline-gallery{
+     
+        h2{
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+@media screen and (min-width:1440px) {
+
+    .instagram-feed{
+        max-width: 1240px;
+    }
+    .instagram-grid{
+        max-width: 1240px;
+    }
+
+    .prestations-title-gallery{
+        max-width: 1240px;
+        margin: 50px auto  ;
+
+    }
+    .prestations-title-gallery{
+       
+        h2{
+         font-size: 3rem;
+        }
+    }
+
+    .prestations-title-tagline-gallery{
+        max-width: 1240px;
+        h2{
+            font-size: 3.75rem;
+        }
+    }
+}
+

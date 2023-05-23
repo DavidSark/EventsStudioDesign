@@ -6,10 +6,10 @@ import './Galerie.scss'
 //import des composants 
 import Entete from '../../components/Entete/Entete'
 import Menu from '../../components/Menu/Menu'
-
-
+import Footer from '../../components/Footer/Footer'
+import ContactForm from '../../components/ContactForm/ContactForm'
 const Galerie = () => {
-  
+
   const [feed, setFeed] = useState([]);
   const [visiblePosts, setVisiblePosts] = useState(6);
 
@@ -37,32 +37,47 @@ const Galerie = () => {
 
   return (
     <div>
-    <Entete />
-    <Menu/>
-    <div className="instagram-feed">
-      <div className="instagram-grid">
-        {feed.slice(0, visiblePosts).map((post) => (
-          <div key={post.id} className="instagram-item">
-            <a href={post.permalink} target="_blank" rel="noreferrer">
-              {post.media_type === "VIDEO" ? (
-               <video src={post.media_url} alt="Instagram post" muted autoPlay loop />
-              ) : (
-                <img src={post.media_url} alt="Instagram post" />
-              )}
-              <div className="instagram-overlay">
-                <div className="instagram-overlay-text">{post.caption}</div>
-              </div>
-            </a>
+      <Entete />
+      <Menu />
+      <div className="prestations-title-gallery">
+                    <div className="prestations-line-gallery"></div>
+                    <h2>Galerie</h2>
+                </div>
+                <div className="prestations-title-tagline-gallery">
+                    <h2>
+                        Cotton candy muffin cupcake <br />
+                        sugar plum marzipan pie donut cotton candy.
+                    </h2>
+                </div>
+      <div className="instagram-feed">
+        <div className="instagram-grid">
+          {feed.slice(0, visiblePosts).map((post) => (
+            <div key={post.id} className="instagram-item">
+              <a href={post.permalink} target="_blank" rel="noreferrer">
+                {post.media_type === "VIDEO" ? (
+                  <video src={post.media_url} alt="Instagram post" muted autoPlay loop />
+                ) : (
+                  <img src={post.media_url} alt="Instagram post" />
+                )}
+                {/* <div className="instagram-overlay">
+                  <div className="instagram-overlay-text">{post.caption}</div>
+                </div> */}
+              </a>
+            </div>
+          ))}
+        </div>
+        {visiblePosts < feed.length && (
+          <div className="center-btn-gallery-load-more">
+            <button className="btn-gallery-loaf-more" onClick={loadMorePosts}>
+              Voir plus
+            </button>
           </div>
-        ))}
+
+        )}
       </div>
-      {visiblePosts < feed.length && (
-        <button className="instagram-load-more" onClick={loadMorePosts}>
-          Voir plus
-        </button>
-      )}
+      <ContactForm/>
+      <Footer/>
     </div>
-</div>
   )
 }
 
