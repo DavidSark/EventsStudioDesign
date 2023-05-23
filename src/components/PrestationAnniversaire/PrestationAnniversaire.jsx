@@ -4,12 +4,13 @@ import './PrestationAnniversaire.scss'
 const PrestationAnniversaire = () => {
     return (
         <div className="container_prestation-02">
+             <div className="anchor" id='anniversaire'></div>
             <div className='container-prestation-parent-anniv'>
                 <div className="container-prestation-text-anniv">
                     <div className='prestation-title-02'>
                         <img src="../img/02.png" alt="" />
                         <div className="prestation-line-02"></div>
-                        <h2 id='anniversaire'>Anniversaire</h2>
+                        <h2 >Anniversaire</h2>
                     </div>
                     <div className="prestation-tagline-text-02">
                         <p>

@@ -2,6 +2,12 @@ $white_gradient: linear-gradient(90deg, #e7e7e7 0%, #e7e7e7 100%);
 .container_prestation-03{
 background-color: #24272A;
 }
+.anchor{
+    display: block;
+    position: relative;
+    top: -75px;
+    visibility: hidden;
+}
 .container-prestation-parent-gender {
     position: relative;
     max-width: 800px;
@@ -21,7 +27,9 @@ background-color: #24272A;
         flex-direction: column;
     }
 }
-
+.container-prestation-text-gender{
+    padding-top: 10px ;
+}
 .prestation-title-03 {
     margin-top: 40px;
     padding: 0 20px;
@@ -218,7 +226,9 @@ justify-content: center;
 }
 
 @media screen and (min-width:1024px) {
-
+    .container-prestation-text-gender{
+        padding-top: 0px ;
+    }
     .prestation-title-03 {
            
         h2 {

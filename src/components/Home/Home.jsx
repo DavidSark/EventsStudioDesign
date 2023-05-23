@@ -25,7 +25,7 @@ const Home = () => {
                     <h2>Décoratrice événementielle basé dans le grand est</h2>
                     <div className='container-discover'>
                         <img src="./img/leaf-right.png" alt="" />
-                        <Link to ="/#entreprise" className='btn-decouvrir'>
+                        <Link to="/#entreprise" className='btn-decouvrir'>
                             <p>Découvrir</p>
                         </Link>
                         <img src="./img/leaf-left.png" alt="" />

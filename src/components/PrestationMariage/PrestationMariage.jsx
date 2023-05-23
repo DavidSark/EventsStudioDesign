@@ -2,14 +2,16 @@ import React from 'react'
 import './PrestationMariage.scss'
 import { HashLink as Link } from 'react-router-hash-link';
 const PrestationMariage = () => {
+
   return (
-    <div  className="container_prestation-01">
+    <div  className="container_prestation-01" >
+        <div className="anchor" id='mariage'></div>
     <div  className='container-prestation-parent-mariage'>
-      <div className="container-prestation-text-mariage">
+      <div className="container-prestation-text-mariage" >
         <div className='prestation-title-01'  >
           <img src="../img/01.png" alt="" />
           <div className="prestation-line-01"></div>
-          <h2 id='mariage'>Mariage</h2>
+          <h2 >Mariage</h2>
         </div>
         <div className="prestation-tagline-text-001">
           <p>
