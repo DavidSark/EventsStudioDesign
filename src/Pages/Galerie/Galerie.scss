@@ -1,0 +1,40 @@
+.instagram-feed {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .instagram-item {
+    overflow: hidden;
+  }
+  
+  .instagram-item img, video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  
+  .instagram-load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .instagram-load-more:hover {
+    background-color: #fff;
+    color: #1e90ff;
+  }
+  
