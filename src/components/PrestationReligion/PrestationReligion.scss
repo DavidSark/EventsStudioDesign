@@ -1,14 +1,10 @@
-$white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
-
-.container_prestation-04 {
-    background-color: #24272A;
-}
+$black-gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 .container-prestation-parent-religion {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #24272A;
+    background-color: #e7e7e7;
     display: flex;
     flex-direction: row-reverse;
   
@@ -44,7 +40,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
     h2 {
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
-        color: #E7E7E7;
+        color: #24272A;
         font-size: 1.5625rem;
 
     }
@@ -53,7 +49,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
 .prestation-line-04 {
     width: 20%;
     height: 1px;
-    background-color: #E7E7E7;
+    background-color: #24272A;
     margin-left: 30px;
 }
 
@@ -64,7 +60,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
     p {
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
-        color: #E7E7E7;
+        color: #24272A;
         font-size: 1rem;
 
     }
@@ -90,7 +86,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
         font-size: 1.25rem;
-        color: #E7E7E7;
+        color: #24272A;
 
     }
 }
@@ -104,7 +100,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
         font-weight: 600;
         font-size: 0.75rem;
         line-height: 1.5;
-        color: #E7E7E7;
+        color: #24272A;
     }
 }
 
@@ -119,7 +115,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
         border-style: solid;
         border-width: 1px;
         background-color: transparent;
-        border-image: $white-gradient 1;
+        border-image: $black-gradient 1;
         position: relative;
         padding: 10px 65px;
         transition: all 0.3s ease-in-out;
@@ -136,7 +132,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
             bottom: -6px;
             border-style: solid;
             border-width: 1px;
-            border-image: $white-gradient 1;
+            border-image: $black-gradient 1;
             transition: all 0.3s ease-in-out;
         }
 
@@ -161,9 +157,8 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
     width: 100vw;
     margin: 20px 20px 50px 20px;
     max-width: 800px;
-    padding: 0 20px;
     height: 1px;
-    background-color: #E7E7E7;
+    background-color: #24272A;
 }
 
 @media screen and (min-width:600px) {
@@ -300,8 +295,8 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
         width: 100vw;
         margin: 60px 20px;
         max-width: 1240px;
-        padding: 0 20px;
+       
         height: 1px;
-        background-color: #E7E7E7;
+        background-color: #24272A;
     }
 }

@@ -1,5 +1,7 @@
-$black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
-
+$white_gradient: linear-gradient(90deg, #e7e7e7 0%, #e7e7e7 100%);
+.container_prestation-03{
+background-color: #24272A;
+}
 .container-prestation-parent-gender {
     position: relative;
     max-width: 800px;
@@ -10,7 +12,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         width: 100%;
         max-width: 800px;
         height: 1px;
-        background-color: #3A3A3A;
+        background-color: #E7E7E7;
         margin: 0 auto;
 
     }
@@ -41,7 +43,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     h2 {
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
-        color: #3A3A3A;
+        color: #E7E7E7;
         font-size: 1.5625rem;
        
     }
@@ -50,7 +52,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 .prestation-line-03 {
     width: 20%;
     height: 1px;
-    background-color: #3A3A3A;
+    background-color: #E7E7E7;
     margin-left: 30px;
 }
 
@@ -61,7 +63,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     p {
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
-        color: #3A3A3A;
+        color: #E7E7E7;
         font-size: 1rem;
         
     }
@@ -87,7 +89,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
         font-size: 1.25rem;
-        color: #3A3A3A;
+        color: #E7E7E7;
         
     }
 }
@@ -101,7 +103,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         font-weight: 600;
         font-size: 0.75rem;
         line-height: 1.5;
-        color: #3A3A3A;
+        color: #E7E7E7;
     }
 }
 
@@ -116,7 +118,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         border-style: solid;
         border-width: 1px;
         background-color: transparent;
-        border-image: $black-gradient 1;
+        border-image: $white-gradient 1;
         position: relative;
         padding: 10px 65px;
         transition: all 0.3s ease-in-out;
@@ -133,7 +135,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
             bottom: -6px;
             border-style: solid;
             border-width: 1px;
-            border-image: $black-gradient 1;
+            border-image: $white-gradient 1;
             transition: all 0.3s ease-in-out;
         }
 
@@ -158,7 +160,7 @@ justify-content: center;
     margin: 20px 20px 50px 20px;
     max-width: 800px;
     height: 1px;
-    background-color: #3A3A3A;
+    background-color: #E7E7E7;
 }
 @media screen and (min-width:600px) {
     .container-prestation-parent-gender {
@@ -293,6 +295,6 @@ justify-content: center;
         max-width: 1240px;
        
         height: 1px;
-        background-color: #3A3A3A;
+        background-color: #E7E7E7;
     }
 }

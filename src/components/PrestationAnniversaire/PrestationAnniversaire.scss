@@ -1,25 +1,19 @@
-$white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
-
-.container_prestation-02 {
-    background-color: #24272A;
-}
+$black_gradient: linear-gradient(90deg, #3A3A3A 0%, #3A3A3A 100%);
 
 .container-prestation-parent-anniv {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #24272A;
+    background-color: #e7e7e7;
     display: flex;
     flex-direction: row-reverse;
   
     .line-prestation-separation {
-        padding: 0 20px;
         width: 100%;
         max-width: 800px;
         height: 1px;
         background-color: #E7E7E7;
         margin: 0 auto;
-
     }
 }
 
@@ -44,7 +38,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
     h2 {
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
-        color: #E7E7E7;
+        color: #3A3A3A;
         font-size: 1.5625rem;
 
     }
@@ -53,22 +47,10 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
 .prestation-line-02 {
     width: 20%;
     height: 1px;
-    background-color: #E7E7E7;
+    background-color: #3A3A3A;
     margin-left: 30px;
 }
 
-.prestation-contenu {
-    margin-top: 20px;
-    padding: 0 20px;
-
-    p {
-        font-family: 'Cormorant', 'serif';
-        font-weight: bold;
-        color: #E7E7E7;
-        font-size: 1rem;
-
-    }
-}
 
 .prestation-img-center-anniv {
     display: flex;
@@ -90,7 +72,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
         font-size: 1.25rem;
-        color: #E7E7E7;
+        color: #3A3A3A;
 
     }
 }
@@ -104,7 +86,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
         font-weight: 600;
         font-size: 0.75rem;
         line-height: 1.5;
-        color: #E7E7E7;
+        color: #3A3A3A;
     }
 }
 
@@ -119,7 +101,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
         border-style: solid;
         border-width: 1px;
         background-color: transparent;
-        border-image: $white-gradient 1;
+        border-image: $black-gradient 1;
         position: relative;
         padding: 10px 65px;
         transition: all 0.3s ease-in-out;
@@ -136,7 +118,7 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
             bottom: -6px;
             border-style: solid;
             border-width: 1px;
-            border-image: $white-gradient 1;
+            border-image: $black-gradient 1;
             transition: all 0.3s ease-in-out;
         }
 
@@ -161,9 +143,9 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
     width: 100vw;
     margin: 20px 20px 50px 20px;
     max-width: 800px;
-    padding: 0 20px;
+  
     height: 1px;
-    background-color: #E7E7E7;
+    background-color: #3A3A3A;
 }
 
 @media screen and (min-width:600px) {
@@ -222,7 +204,9 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
 }
 
 @media screen and (min-width:1024px) {
-
+    .container-prestation-text-anniv{
+        margin-left: 45px;
+    }
     .prestation-title-02 {
 
         h2 {
@@ -300,8 +284,8 @@ $white_gradient: linear-gradient(90deg, #E7E7E7 0%, #E7E7E7 100%);
         width: 100vw;
         margin: 60px 20px;
         max-width: 1240px;
-        padding: 0 20px;
+       
         height: 1px;
-        background-color: #E7E7E7;
+        background-color: #3A3A3A;
     }
 }
