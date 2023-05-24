@@ -12,6 +12,8 @@ import Footer from '../../components/Footer/Footer'
 import '../Global.scss'
 
 const Accueil = () => {
+
+  
   return (
     <div className='global'>
       <Entete />

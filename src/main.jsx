@@ -16,57 +16,55 @@ import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
-
 } from "react-router-dom";
-
+import { AuthContext, AuthContextProvider } from './components/context/AuthContext';
 
 
 
 const currentUser = false;
 
-const RequireAuth = ({children}) => {
-    return currentUser ? (children) : <Navigate to ="/zonelogin"/>
+const RequireAuth = ({ children }) => {
+  return currentUser ? (children) : <Navigate to="/zonelogin" />
 };
-
-
-
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Accueil/>,
+    element: <Accueil />,
   },
 
   {
     path: "/prestations",
-    element: <Prestations/>,
+    element: <Prestations />,
   },
 
   {
     path: "/galerie",
-    element: <Galerie/>,
+    element: <Galerie />,
   },
 
   {
     path: "/event",
-    element: <EventSection/>,
+    element: <EventSection />,
   },
 
   {
     path: "/zonelogin",
-    element: <ZoneLogin/>,
+    element: <ZoneLogin />,
   },
 
   {
     path: "/zoneadmin",
-    element: <RequireAuth><ZoneAdmin/></RequireAuth>,
+    element: <ZoneAdmin />,
   },
 ]);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-     <RouterProvider router={router} />
-  </React.StrictMode>
+  <AuthContextProvider>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </AuthContextProvider>
 );
