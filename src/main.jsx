@@ -6,16 +6,27 @@ import Accueil from '../src/Pages/Accueil/Accueil';
 import Prestations from '../src/Pages/Prestations/Prestations';
 import EventSection from './components/EventSection/EventSection';
 import Galerie from './Pages/Galerie/Galerie';
-import LoginZone from './Pages/Zone/LoginZone/LoginZone'
+
+//Admin Zone pages
+import ZoneLogin from './Pages/Zone/ZoneLogin/ZoneLogin';
+import ZoneAdmin from './Pages/Zone/ZoneAdmin/ZoneAdmin';
 
 //import du router
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
+
 } from "react-router-dom";
 
 
 
+
+const currentUser = false;
+
+const RequireAuth = ({children}) => {
+    return currentUser ? (children) : <Navigate to ="/zonelogin"/>
+};
 
 
 
@@ -25,6 +36,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Accueil/>,
   },
+
   {
     path: "/prestations",
     element: <Prestations/>,
@@ -41,8 +53,13 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/loginZone",
-    element: <LoginZone/>,
+    path: "/zonelogin",
+    element: <ZoneLogin/>,
+  },
+
+  {
+    path: "/zoneadmin",
+    element: <RequireAuth><ZoneAdmin/></RequireAuth>,
   },
 ]);
 
