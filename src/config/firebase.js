@@ -1,10 +1,10 @@
 
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth'
-const accessTokenFirebase =  import.meta.env.VITE_ACCESS_FIREBASE
+import {getAuth} from 'firebase/auth'
+
 const firebaseConfig = {
-  apiKey:  accessTokenFirebase ,
+  apiKey:  import.meta.env.VITE_ACCESS_FIREBASE ,
   authDomain: "events-studio-designn.firebaseapp.com",
   projectId: "events-studio-designn",
   storageBucket: "events-studio-designn.appspot.com",
