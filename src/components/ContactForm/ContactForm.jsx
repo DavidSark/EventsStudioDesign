@@ -56,38 +56,38 @@ const ContactForm = () => {
             <form>
               <div className="form-nom-prenom">
                 <div className='form-nom'>
-                  <label for="lastName">Nom<span>*</span> </label>
+                  <label htmlFor="lastName">Nom<span>*</span> </label>
                   <input type="text" id="lastName" name="lastName" required placeholder='Votre nom' />
                 </div>
                 <div className='form-prenom'>
-                  <label for="firstName" placeholder='prenom'>Prénom<span>*</span></label>
+                  <label htmlFor="firstName" placeholder='prenom'>Prénom<span>*</span></label>
                   <input type="text" id="firstName" name="firstName" required placeholder='Votre prénom' />
                 </div>
               </div>
 
               <div className="form-mail-phone">
                 <div className='form-mail'>
-                  <label for="email">Email<span>*</span></label>
+                  <label htmlFor="email">Email<span>*</span></label>
                   <input type="email" id="email" name="email" required placeholder='Votre prénom' />
                 </div>
                 <div className='form-phone'>
-                  <label for="phone">Téléphone</label>
+                  <label htmlFor="phone">Téléphone</label>
                   <input type="tel" id="phone" name="phone" placeholder='01 23 45 67 89' />
                 </div>
               </div>
 
               <div className="form-adress-postal">
                 <div className='form-adress'>
-                  <label for="address">Adresse complète<span>*</span></label>
+                  <label htmlFor="address">Adresse complète<span>*</span></label>
                   <input type="text" id="address" name="address" required placeholder='123 rue exemple' />
                 </div>
                 <div className='form-postal'>
-                  <label for="postalCode">Code postal<span>*</span></label>
+                  <label htmlFor="postalCode">Code postal<span>*</span></label>
                   <input type="text" id="postalCode" name="postalCode" required placeholder='51100' />
                 </div>
               </div>
               <div className='form-prestation'>
-                <label for="prestation">Prestation<span>*</span></label>
+                <label htmlFor="prestation">Prestation<span>*</span></label>
                 <select id="prestation" name="prestation" required>
                   <option value="">Sélectionnez une prestation</option>
                   <option value="mariage">Mariage</option>
@@ -97,7 +97,7 @@ const ContactForm = () => {
                 </select>
               </div>
               <div className='form-message'>
-                <label for="message">Message<span>*</span></label>
+                <label htmlFor="message">Message<span>*</span></label>
                 <textarea id="message" name="message" required placeholder='Votre message'></textarea>
               </div>
               <button type="submit" className='form-send-btn'>Envoyer</button>
