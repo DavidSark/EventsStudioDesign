@@ -53,12 +53,13 @@ const Footer = () => {
 
                             <Link>Politique de confidentialité</Link>
                             <Link>Mentions Légales</Link>
-
+                            <Link to="/loginZone">Zone Privée</Link>
                             <div className="link-social">
                                 <p>Réseaux</p>
                                 <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank'>facebook</Link>
                                 <Link to="https://www.instagram.com/eventsstudiodesign/" target='_blank'>instagram</Link>
                                 <Link to="https://www.tiktok.com/@eventsstudiodesign" target='_blank'>tiktok</Link>
+                                
                             </div>
                         </div>
 
