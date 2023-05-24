@@ -12,9 +12,22 @@ import Galerie from './Pages/Galerie/Galerie';
 import ZoneLogin from './Pages/Zone/ZoneLogin/ZoneLogin';
 import ZoneAdmin from './Pages/Zone/ZoneAdmin/ZoneAdmin';
 
-//import du router
+//import context
+import { AuthContext } from "./components/context/AuthContext";
+import { useContext } from "react";
+
+
+
+
 
 function App() {
+
+  const {currentUser} = useContext(AuthContext)
+
+  const RequireAuth = ({children}) => {
+    return currentUser ? children : <Navigate to ="/zonelogin"/>
+  };
+  console.log(currentUser);
   return (
     <div>
        <BrowserRouter>
@@ -24,7 +37,7 @@ function App() {
           <Route path="/galerie" element={<Galerie/>}/>      
           <Route path="/event" element={<EventSection/>}/>      
           <Route path="/zonelogin" element={<ZoneLogin/>}/>      
-          <Route path="/zoneadmin" element={<ZoneAdmin/>}/>      
+          <Route path="/zoneadmin" element={<RequireAuth><ZoneAdmin/></RequireAuth>}/>      
 
         </Routes>
       </BrowserRouter>
