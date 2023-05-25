@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 //import des pages à utiliser 
 import Accueil from '../src/Pages/Accueil/Accueil';
@@ -12,22 +12,13 @@ import Galerie from './Pages/Galerie/Galerie';
 import ZoneLogin from './Pages/Zone/ZoneLogin/ZoneLogin';
 import ZoneAdmin from './Pages/Zone/ZoneAdmin/ZoneAdmin';
 
-//import context
-import { AuthContext } from "./components/context/AuthContext";
-import { useContext } from "react";
-
-
-
+//importe private route
+import  { RequireAuth } from "../src/components/context/AuthContext";
 
 
 function App() {
 
-  const {currentUser} = useContext(AuthContext)
 
-  const RequireAuth = ({children}) => {
-    return currentUser ? children : <Navigate to ="/zonelogin"/>
-  };
-  console.log(currentUser);
   return (
     <div>
        <BrowserRouter>
@@ -36,8 +27,10 @@ function App() {
           <Route path="/prestations" element={<Prestations/>}/>      
           <Route path="/galerie" element={<Galerie/>}/>      
           <Route path="/event" element={<EventSection/>}/>      
-          <Route path="/zonelogin" element={<ZoneLogin/>}/>      
+          <Route path="/zonelogin" element={<ZoneLogin/>}/>     
           <Route path="/zoneadmin" element={<RequireAuth><ZoneAdmin/></RequireAuth>}/>      
+          {/* <PrivateRoute exact path="/zoneadmin" element={<ZoneAdmin/>}/> */}
+             
 
         </Routes>
       </BrowserRouter>

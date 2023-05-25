@@ -1,11 +1,19 @@
 import React from 'react'
-import { Navigate } from 'react-router-dom';
+
+//import des composants
+import Entete from '../../../components/Entete/Entete'
+import Menu from '../../../components/Menu/Menu'
+
 
 const ZoneAdmin = () => {
 
   
   return (
-    <div>ZoneAdmin pour les produits</div>
+    <div>
+      <Entete/>
+      <Menu/>
+      <h3>Gérez votre boutique</h3>
+    </div>
   )
 }
 

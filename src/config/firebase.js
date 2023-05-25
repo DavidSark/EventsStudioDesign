@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import {getAuth} from 'firebase/auth'
+import {getAuth,setPersistence, browserSessionPersistence } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey:  import.meta.env.VITE_ACCESS_FIREBASE ,
@@ -17,3 +17,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 export const auth = getAuth(app)
+
+setPersistence(auth, browserSessionPersistence)
+  .catch((error) => {
+    console.log(error);
+  });
+
+  

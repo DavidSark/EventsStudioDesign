@@ -1,10 +1,40 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import {auth} from '../../config/firebase'
 import "./Entete.scss";
+
+import { onAuthStateChanged, signOut } from 'firebase/auth'
 // import Facebook from '../../../public/img/svg/facebook.svg'
 // import Instagram from '../../../public/img/svg/instagram.svg'
 // import Tiktok from '../../../public/img/svg/tiktok.svg'
 
 const Entete = () => {
+
+  const [authUser, setAuthUser] = useState(null);
+
+  useEffect(()=>{
+    const listen = onAuthStateChanged(auth,(user) => {
+      if(user){
+        setAuthUser(user)
+      }else{
+        setAuthUser(null);
+      }
+    })
+
+    return () =>{
+      listen();
+    }
+  },[]);
+
+
+  const logout = () => {
+    signOut(auth).then(() => {
+      console.log('déconnexion réussi')
+    }).catch(error=>console.log(error));
+  }
+
+  
+
+
   return (
     <div className='entete'>
       <div className='bloc-social-icon'>
@@ -27,6 +57,16 @@ const Entete = () => {
       <div className="entete-phone">
         <h2>07 82 75 09 19</h2>
       </div>
+
+      
+     
+        <div>
+         {
+          authUser ? <><p>{`Connecté en tant que : ${authUser.email}`}</p> <button onClick={logout}>Déconnexion</button></> : <p>Déconnecté</p>
+         }
+        </div>
+      
+    
     </div>
   )
 }

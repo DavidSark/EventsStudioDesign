@@ -1,22 +1,13 @@
-import { createContext, useEffect, useReducer } from "react";
-import AuthReducer from "./AuthReducer";
+import { Navigate } from 'react-router-dom'
+import {Auth} from '../../components/Auth/auth'
 
-const INITIAL_STATE = {
-    currentUser: JSON.parse(localStorage.getItem("user")) || null,
-};
+export const RequireAuth = ({children}) => {
 
-export const AuthContext = createContext(INITIAL_STATE);
+    const useAuth = Auth()
 
-export const AuthContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
+    if (!useAuth.user){
+        return <Navigate to="/zonelogin"/>
+    }
 
-    useEffect(() =>{
-        localStorage.setItem("user", JSON.stringify(state.currentUser))
-    }, [state.currentUser])
-
-    return (
-        <AuthContext.Provider value={{ currentUser: state.currentUser, dispatch }}>
-            {children}
-        </AuthContext.Provider>
-    )
+    return children
 }
