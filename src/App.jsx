@@ -5,7 +5,7 @@ import Accueil from '../src/Pages/Accueil/Accueil';
 import Prestations from '../src/Pages/Prestations/Prestations';
 import EventSection from './components/EventSection/EventSection';
 import Galerie from './Pages/Galerie/Galerie';
-
+import Boutique from './Pages/Boutique/Boutique';
 
 
 //Admin Zone pages
@@ -32,6 +32,7 @@ function App() {
             <Route path="/prestations" element={<Prestations />} />
             <Route path="/galerie" element={<Galerie />} />
             <Route path="/event" element={<EventSection />} />
+            <Route path="/boutique" element={<Boutique />} />
             <Route path="/zonelogin" element={<ZoneLogin />} />
             <Route path="/zoneadmin" element={<ProtectedRoute><ZoneAdmin /></ProtectedRoute>} />
           </Routes>
