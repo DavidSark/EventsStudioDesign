@@ -20,7 +20,8 @@ export const Auth = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 console.log(userCredential);
-                navigate("/zoneadmin",  {replace: true});
+          
+                navigate("/zoneadmin");
             })
             .catch((error) => {
                 setError(true);

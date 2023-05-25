@@ -5,9 +5,8 @@ export const RequireAuth = ({children}) => {
 
     const useAuth = Auth()
 
-    if (!useAuth.user){
-        return <Navigate to="/zonelogin"/>
-    }
+    
+    return useAuth ? children : <Navigate to="/login" />;
+  };
 
-    return children
-}
+
