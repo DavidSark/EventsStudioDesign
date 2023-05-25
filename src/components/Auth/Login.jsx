@@ -19,9 +19,9 @@ const Login = () => {
       setError('')
       try {
         await signIn(email, password)
-        navigate('/zonelogin')
+        navigate('/zoneadmin')
       } catch (e) {
-        setError(e.message)
+        setError(true);
         console.log(e.message)
       }
     };
@@ -41,7 +41,7 @@ const Login = () => {
                     <input type="email" placeholder="email"  onChange={(e) => setEmail(e.target.value)}/>
                     <input type="password" placeholder="mot de passe"  onChange={(e) => setPassword(e.target.value)} />
                     <button type="submit">Connexion</button>
-                     <span>Mauvais email ou mot de passe!</span>
+                    {error && <span>Mauvais email ou mot de passe!</span>}
                 </form>
             </div>
 
