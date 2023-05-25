@@ -17,7 +17,7 @@ const ZoneAdmin = () => {
       try {
         await logout();
         navigate('/');
-        console.log('You are logged out')
+        console.log('Déconnecté avec succès')
       } catch (e) {
         console.log(e.message);
       }

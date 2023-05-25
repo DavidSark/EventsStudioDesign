@@ -11,11 +11,12 @@ import Galerie from './Pages/Galerie/Galerie';
 //Admin Zone pages
 import ZoneLogin from './Pages/Zone/ZoneLogin/ZoneLogin';
 import ZoneAdmin from './Pages/Zone/ZoneAdmin/ZoneAdmin';
-import { AuthContextProvider } from "./components/context/AuthContext";
-import ProtectedRoute from "./components/ProtectedRoute";
 
 
 //importe private route
+import ProtectedRoute from "./components/ProtectedRoute";
+
+
 
 
 
@@ -25,7 +26,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <AuthContextProvider>
+       
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/prestations" element={<Prestations />} />
@@ -33,10 +34,8 @@ function App() {
             <Route path="/event" element={<EventSection />} />
             <Route path="/zonelogin" element={<ZoneLogin />} />
             <Route path="/zoneadmin" element={<ProtectedRoute><ZoneAdmin /></ProtectedRoute>} />
-
-
           </Routes>
-        </AuthContextProvider>
+        
       </BrowserRouter>
     </div>
   );
