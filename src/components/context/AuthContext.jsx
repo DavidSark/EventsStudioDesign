@@ -1,12 +1,46 @@
-import { Navigate } from 'react-router-dom'
-import {Auth} from '../../components/Auth/auth'
+import { createContext, useContext, useEffect, useState } from 'react';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from 'firebase/auth';
+import { auth } from '../../config/firebase';
 
-export const RequireAuth = ({children}) => {
+const UserContext = createContext();
 
-    const useAuth = Auth()
+export const AuthContextProvider = ({ children }) => {
+  const [user, setUser] = useState({});
 
-    
-    return useAuth ? children : <Navigate to="/login" />;
+  const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
+   const signIn = (email, password) =>  {
+    return signInWithEmailAndPassword(auth, email, password)
+   }
 
+  const logout = () => {
+      return signOut(auth)
+  }
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(currentUser);
+      setUser(currentUser);
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  return (
+    <UserContext.Provider value={{ createUser, user, logout, signIn }}>
+      {children}
+    </UserContext.Provider>
+  );
+};
+
+export const UserAuth = () => {
+  return useContext(UserContext);
+};
