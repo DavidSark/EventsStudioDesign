@@ -1,54 +1,90 @@
-.entete {
-
-    background-color: #393C3F;
+.entete-parent{
     display: flex;
-    align-items: center;
-    padding: 15px 10px 15px 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #393C3F;
+    .entete {
 
-
-    .bloc-social-icon {
         
         display: flex;
-        gap: 25px;
-
-
-        .social-icon {
+        align-items: center;
+        padding: 15px 10px 15px 40px;
+    
+    
+        .bloc-social-icon {
+            
+            display: flex;
+            gap: 25px;
+    
+    
+            .social-icon {
+                height: 20px;
+            }
+        }
+    
+        .entete-email{
+            a{
+                text-decoration: none;
+            }
+        }
+        .tiktok {
             height: 20px;
         }
-    }
-
-    .entete-email{
-        a{
-            text-decoration: none;
+    
+        .separator {
+            width: 1px;
+            /* Largeur du trait de séparation */
+            height: 25px;
+            /* Hauteur du trait de séparation */
+            background-color: #ddd;
+            /* Couleur du trait de séparation */
+            margin: 0 30px;
+            /* Espace autour du trait de séparation */
         }
-    }
-    .tiktok {
-        height: 20px;
-    }
-
-    .separator {
-        width: 1px;
-        /* Largeur du trait de séparation */
-        height: 25px;
-        /* Hauteur du trait de séparation */
-        background-color: #ddd;
-        /* Couleur du trait de séparation */
-        margin: 0 30px;
-        /* Espace autour du trait de séparation */
-    }
-
-    h2 {
-        font-family: 'Poppins', sans-serif;
-        font-weight: normal;
-        font-size: 14px;
-        color: #E7E7E7;
-    }
-
-
-    @media (max-width: 768px){
-     
-           display: none;
+    
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            color: #E7E7E7;
+        }
+    
+        
+    
+        @media (max-width: 768px){
+         
+               display: none;
+           
+        }
+    
        
     }
-
+    
+   
 }
+
+
+.btn-logout-admin{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+ 
+   
+   
+    button{
+        padding: 5px 10px;
+        background-color: #542222;
+        border: none;
+        color: #E7E7E7;
+        font-size: 14px;
+      
+        cursor: pointer;
+    }
+
+    button:hover{
+        font-weight: bold;
+    }
+}   
+
+
