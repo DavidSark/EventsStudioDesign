@@ -5,9 +5,9 @@ import './ZoneAdmin.scss'
 //import des composants
 import Entete from '../../../components/Entete/Entete'
 import Menu from '../../../components/Menu/Menu'
-import { db } from '../../../config/firebase';
+import { db, storage } from '../../../config/firebase';
 import { getDocs, collection, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
-
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 const ZoneAdmin = () => {
 
@@ -32,13 +32,63 @@ const ZoneAdmin = () => {
   const [newProductDesc, setNewProductDesc] = useState("");
   const [newProductPrice, setNewProductPrice] = useState(0);
 
+
+  //useState image : 
+  const [file, setFile] = useState("")
+  const [data, setData] = useState({});
+  const [per, setPerc] = useState(null);
+  //image produit:
+  useEffect(() => {
+    const uploadFile = () => {
+      const name = new Date().getTime() + file.name
+      console.log(name);
+      const storageRef = ref(storage, file.name);
+      const uploadTask = uploadBytesResumable(storageRef, file);
+
+      // Register three observers:
+      // 1. 'state_changed' observer, called any time the state changes
+      // 2. Error observer, called on failure
+      // 3. Completion observer, called on successful completion
+      uploadTask.on('state_changed',
+        (snapshot) => {
+          // Observe state change events such as progress, pause, and resume
+          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log('Upload is ' + progress + '% done');
+          setPerc(progress);
+          switch (snapshot.state) {
+            case 'paused':
+              console.log('Upload is paused');
+              break;
+            case 'running':
+              console.log('Upload is running');
+              break;
+            default:
+              break;
+          }
+        },
+        (error) => {
+          console.log(error)
+        },
+        () => {
+          // Handle successful uploads on complete
+          // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            setData((prev) =>({...prev, img:downloadURL}));
+          });
+        }
+      );
+    };
+    file && uploadFile();
+  }, [file])
+
   //mise à jour du tire du produit
   const [updatedTitle, setUpdatedTitle] = useState("");
 
 
   const [productList, setProductList] = useState([]);
   const productCollectionRef = collection(db, "produits")
-  
+
   const getProductList = async () => {
     //Lire les données
     //set la product list
@@ -50,21 +100,21 @@ const ZoneAdmin = () => {
       console.error(err)
     }
   };
-  
- //supprimé un produit
- const deleteProduct = async (id) =>{
-  const productDoc = doc(db, "produits", id);
-  await deleteDoc(productDoc);
-  getProductList();
-}
 
-  //éditer un produit
-  const updateProductTitle = async (id) =>{
+  //supprimé un produit
+  const deleteProduct = async (id) => {
     const productDoc = doc(db, "produits", id);
-    await updateDoc(productDoc, {title: updatedTitle});
+    await deleteDoc(productDoc);
     getProductList();
   }
-  
+
+  //éditer un produit
+  const updateProductTitle = async (id) => {
+    const productDoc = doc(db, "produits", id);
+    await updateDoc(productDoc, { title: updatedTitle });
+    getProductList();
+  }
+
 
 
   useEffect(() => {
@@ -82,7 +132,7 @@ const ZoneAdmin = () => {
     }
   }
 
- 
+
 
   return (
     <div className='zoneadmin-main-container'>
@@ -103,7 +153,9 @@ const ZoneAdmin = () => {
         <input placeholder='nom du produit' onChange={(e) => setNewProductTitle(e.target.value)} />
         <input placeholder='description' onChange={(e) => setNewProductDesc(e.target.value)} />
         <input placeholder='prix' type='number' onChange={(e) => setNewProductPrice(Number(e.target.value))} />
-        <button onClick={onSubmitProduct}>Enregister le produit</button>
+        <label htmlFor='file'>+</label>
+        <input type='file' id='file' onChange={(e) => setFile(e.target.files[0])} />
+        <button disabled={per !== null && per < 100}  onClick={onSubmitProduct}>Enregister le produit</button>
       </div>
 
       <div>
@@ -113,9 +165,9 @@ const ZoneAdmin = () => {
             <p>Description: {product.desc}</p>
             <p>Prix: {product.prix}€</p>
             <button onClick={() => deleteProduct(product.id)}>supprimer</button>
-            
 
-            <input placeholder='nouveau titre' onChange={(e)=> setUpdatedTitle(e.target.value)}/>
+
+            <input placeholder='nouveau titre' onChange={(e) => setUpdatedTitle(e.target.value)} />
             <button onClick={() => updateProductTitle(product.id)}>Éditer</button>
           </div>
         ))}
