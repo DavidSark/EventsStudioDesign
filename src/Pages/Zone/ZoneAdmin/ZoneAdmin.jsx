@@ -8,6 +8,8 @@ import Menu from '../../../components/Menu/Menu'
 import { db, storage } from '../../../config/firebase';
 import { getDocs, collection, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import Table from '../../../components/Table/Table';
+import Datatable from '../../../components/datatable/Datatable';
 
 const ZoneAdmin = () => {
 
@@ -74,7 +76,7 @@ const ZoneAdmin = () => {
           // Handle successful uploads on complete
           // For instance, get the download URL: https://firebasestorage.googleapis.com/...
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            setData((prev) =>({...prev, img:downloadURL}));
+            setData((prev) => ({ ...prev, img: downloadURL }));
           });
         }
       );
@@ -155,7 +157,7 @@ const ZoneAdmin = () => {
         <input placeholder='prix' type='number' onChange={(e) => setNewProductPrice(Number(e.target.value))} />
         <label htmlFor='file'>+</label>
         <input type='file' id='file' onChange={(e) => setFile(e.target.files[0])} />
-        <button disabled={per !== null && per < 100}  onClick={onSubmitProduct}>Enregister le produit</button>
+        <button disabled={per !== null && per < 100} onClick={onSubmitProduct}>Enregister le produit</button>
       </div>
 
       <div>
@@ -172,6 +174,13 @@ const ZoneAdmin = () => {
           </div>
         ))}
       </div>
+
+      <div className="listContainer">
+        <div className="listTitle">Les derniers produits ajoutés</div>
+        <Table />
+      </div>
+
+      <Datatable />
       <button onClick={handleLogout} className=''>
         Logout
       </button>
