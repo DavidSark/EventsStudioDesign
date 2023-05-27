@@ -14,6 +14,8 @@ import {
 const Datatable = () => {
     const [data, setData] = useState([]);
 
+
+
     useEffect(() => {
         const unsub = onSnapshot(
             collection(db, "produits"),
@@ -51,7 +53,7 @@ const Datatable = () => {
             renderCell: (params) => {
                 return (
                     <div className="cellAction">
-                        <Link to="/zoneadmin/test" style={{ textDecoration: "none" }}>
+                        <Link to={`/zoneadmin/${params.row.id}`}  style={{ textDecoration: "none" }}>
                             <div className="viewButton">View</div>
                         </Link>
                         <div
@@ -65,6 +67,7 @@ const Datatable = () => {
             },
         },
     ];
+      
     return (
         <div className="datatable">
             <div className="datatableTitle">

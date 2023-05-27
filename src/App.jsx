@@ -18,7 +18,7 @@ import ZoneAdmin from './Pages/Zone/ZoneAdmin/ZoneAdmin';
 import ProtectedRoute from "./components/ProtectedRoute";
 import Single from "./Pages/Single/Single";
 import New from "./Pages/New/New";
-
+import ZoneSingleProd from "./Pages/Zone/ZoneSingleProd/ZoneSingleProd"
 
 
 
@@ -37,10 +37,11 @@ function App() {
           <Route path="/galerie" element={<Galerie />} />
           <Route path="/event" element={<EventSection />} />
           <Route path="/boutique" element={<Boutique />} />
+          <Route path="/boutique/:productId" element={<Single />} />
           <Route path="/zonelogin" element={<ZoneLogin />} />
           <Route path="/zoneadmin">
             <Route index element={<ProtectedRoute><ZoneAdmin /></ProtectedRoute>} />
-            <Route path=":userId" element={<ProtectedRoute><Single /></ProtectedRoute>} />
+            <Route path="/zoneadmin/:productId" element={<ProtectedRoute><ZoneSingleProd/></ProtectedRoute>} />
             <Route path="new" element={<ProtectedRoute><New inputs={productInputs} title="Ajoutez un nouveau produit" /></ProtectedRoute>} />
           </Route>
 

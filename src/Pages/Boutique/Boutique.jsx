@@ -1,16 +1,16 @@
-import React from 'react'
+
 import './Boutique.scss'
-import { DataGrid } from "@mui/x-data-grid";
-import { productColumns } from "../../config/datatablesource";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+
+
+import { Link, useNavigate } from "react-router-dom";
+import {React, useEffect, useState } from "react";
 import { db } from "../../config/firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 
 
 const Boutique = () => {
 
-
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -35,8 +35,12 @@ const Boutique = () => {
 
 
   const renderProducts = () => {
+    const handleProductClick = (productId) => {
+      navigate(`/boutique/${productId}`);
+    };
+    
     return data.map((product) => (
-      <div key={product.id} className="product">
+      <div key={product.id} className="product"  onClick={() => handleProductClick(product.id)}>
         <img src={product.img} alt={product.name} />
         <h3>{product.name}</h3>
         <p>{product.description}</p>
