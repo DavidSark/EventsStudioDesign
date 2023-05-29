@@ -36,7 +36,7 @@ contactEmail.verify((error) => {
 })
 
 
-app.post("https://tangerine-manatee-6e4862.netlify.app/api/contact", bodyParser.urlencoded({ extended: false }), (req, res) => {
+app.post("/api/contact", bodyParser.urlencoded({ extended: false }), (req, res) => {
     const name =  req.body.lastName + '  ' + req.body.firstName;
     const email = req.body.email;
     const phone = req.body.phone;
