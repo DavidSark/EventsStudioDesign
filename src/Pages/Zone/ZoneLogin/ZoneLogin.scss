@@ -1,0 +1,45 @@
+.title-zone-privee{
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    gap: 20px;
+    padding: 0px 20px;
+     margin: 50px auto 20px ;
+    .line-zone-privee{
+        width: 30%;
+        max-width: 220px;
+        height: 1px;
+        background-color: #3A3A3A;
+    }
+    h2{
+        font-family: 'Cormorant', 'serif';
+        font-weight: bold;
+        color: #3A3A3A;
+        font-size: 1.5625rem;
+        text-transform: uppercase;
+        
+    }
+}
+
+
+@media screen and (min-width:1024px) {
+ 
+    
+    .title-zone-privee{
+        h2{
+         font-size: 3rem;
+        }
+    }
+}
+
+
+@media screen and (min-width:1440px) {
+
+    .title-zone-privee{
+        max-width: 1240px;
+        margin: 50px auto  ;
+
+    }
+  
+   
+}

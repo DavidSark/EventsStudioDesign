@@ -3,6 +3,10 @@ import './GallerySection.scss'
 import { HashLink as Link } from 'react-router-hash-link';
 
 const GallerySection = () => {
+    const handleClick = () => {
+        window.scroll(0, 0); // Défilement de la page vers le haut
+        setIsMenuOpen(false); // Fermeture du menu
+      };
     return (
         <div className='container-gallery-parent'>
 
@@ -33,7 +37,7 @@ const GallerySection = () => {
 
 
                             <div className="center-btn-gallery">
-                                <Link to="/galerie" className='btn-gallery'>
+                                <Link to="/galerie" className='btn-gallery' onClick={handleClick}>
                                     <p>Lorem</p>
                                 </Link>
                             </div>

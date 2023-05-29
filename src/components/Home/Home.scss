@@ -6,7 +6,12 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
 
 
-
+.contact-anchor{
+        display: block;
+        position: relative;
+        top: -120px;
+        visibility: hidden;
+}
 .container-home {
     background-image: linear-gradient(to bottom, #E7E7E7 10vh, #E7E7E7 0%, #24272A 0%, #24272A 60%);
     height: 100vh;

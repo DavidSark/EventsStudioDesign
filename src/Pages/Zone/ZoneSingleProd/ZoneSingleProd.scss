@@ -1,0 +1,35 @@
+.zone-single-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Poppins', 'sans-serif';
+    
+    .zone-single-product-img {
+        img {
+            width: 200px;
+        }
+    }
+
+    .zone-single-product-text{
+        margin: 10px 0 30px;
+
+        button{
+            width: 150px;
+            padding: 10px;
+            border: none;
+            background-color: teal;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+           
+        }
+       p{
+        padding: 5px 0px;
+        span{
+            font-style: italic;
+        }
+    }
+    }
+}

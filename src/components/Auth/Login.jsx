@@ -29,12 +29,6 @@ const Login = () => {
 
     return (
         <div className="container-login">
-            <div className="register">
-                <h3>Inscrivez vous</h3>
-                <input placeholder="email" />
-                <input placeholder="mot de passe" />
-                <button >Inscription</button>
-            </div>
             <div className="login">
                 <h3>Connectez vous</h3>
                 <form onSubmit={handleSubmit}>

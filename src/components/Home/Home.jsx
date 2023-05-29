@@ -45,9 +45,10 @@ const Home = () => {
                 <EventSection />
             </div>
             <GallerySection />
-            <div id="contact">
-                <ContactForm />
-            </div>
+            <div className='contact-anchor' id="contact"></div>
+
+            <ContactForm />
+
         </div>
     )
 }

@@ -8,7 +8,6 @@ import Menu from '../../../components/Menu/Menu'
 import { db, storage } from '../../../config/firebase';
 import { getDocs, collection, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import Table from '../../../components/Table/Table';
 import Datatable from '../../../components/datatable/Datatable';
 
 const ZoneAdmin = () => {
@@ -146,12 +145,14 @@ const ZoneAdmin = () => {
       </div>
       <div className="zoneadmin-title-tagline">
         <h2>
-          Vous êtes ici dans votre espace privé <br />
+          Vous êtes ici dans votre espace privé. <br />
           Gérez les produits de votre boutiques.
         </h2>
+
+
       </div>
 
-      <div>
+      {/* <div>
         <input placeholder='nom du produit' onChange={(e) => setNewProductTitle(e.target.value)} />
         <input placeholder='description' onChange={(e) => setNewProductDesc(e.target.value)} />
         <input placeholder='prix' type='number' onChange={(e) => setNewProductPrice(Number(e.target.value))} />
@@ -173,17 +174,13 @@ const ZoneAdmin = () => {
             <button onClick={() => updateProductTitle(product.id)}>Éditer</button>
           </div>
         ))}
-      </div>
+      </div> */}
 
-      <div className="listContainer">
-        <div className="listTitle">Les derniers produits ajoutés</div>
-        <Table />
-      </div>
 
       <Datatable />
-      <button onClick={handleLogout} className=''>
+      {/* <button onClick={handleLogout} className=''>
         Logout
-      </button>
+      </button> */}
     </div>
   )
 }

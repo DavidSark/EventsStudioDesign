@@ -13,7 +13,11 @@ const ZoneLogin = () => {
     <div>
       <Entete />
       <Menu />
-   
+      <div className="title-zone-privee">
+                    <div className="line-zone-privee"></div>
+                    <h2>Zone privée</h2>
+                </div>
+                
         <Login />
     
       <Footer />

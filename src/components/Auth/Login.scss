@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 110px auto;
+   
 }
 
 .register{
@@ -10,7 +12,15 @@
 }
 
 .login{
-    margin-top: 20px;
+ 
+    padding: 80px 30px;
+    border: 1px solid #3A3A3A;
+    h3{
+        font-family: 'Poppins', "sans-serif";
+        color: #3A3A3A;
+        font-size: 1.5rem;
+    }
+    
     form{
         display: flex;
         flex-direction: column;
@@ -20,12 +30,16 @@
             height: 30px;
             margin: 10px 0;
         }
+       
 
         button{
             width: 200px;
             height: 30px;
             border: none;
             background-color: bisque;
+            font-family: 'Poppins', 'sans-serif';
+            text-transform: uppercase;
+            margin-top: 30px;
         }
 
         span {
@@ -40,6 +54,14 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-   
+    align-items: center; 
+}
+
+
+@media screen and (min-width:1024px) {
+    .login{
+ 
+        padding:90px 60px;
+        border: 1px solid #3A3A3A;
+    }
 }

@@ -10,6 +10,7 @@ import {
     doc,
     onSnapshot,
 } from "firebase/firestore";
+import Footer from "../Footer/Footer";
 
 const Datatable = () => {
     const [data, setData] = useState([]);
@@ -54,13 +55,13 @@ const Datatable = () => {
                 return (
                     <div className="cellAction">
                         <Link to={`/zoneadmin/${params.row.id}`}  style={{ textDecoration: "none" }}>
-                            <div className="viewButton">View</div>
+                            <div className="viewButton">Modifier</div>
                         </Link>
                         <div
                             className="deleteButton"
                             onClick={() => handleDelete(params.row.id)}
                         >
-                            Delete
+                            Supprimer
                         </div>
                     </div>
                 );
@@ -71,9 +72,9 @@ const Datatable = () => {
     return (
         <div className="datatable">
             <div className="datatableTitle">
-                Add New User
+                Vos produits ajoutés à la boutique :
                 <Link to="/zoneadmin/new" className="link">
-                    Add New
+                    Ajouter un produit
                 </Link>
             </div>
             <DataGrid
@@ -84,6 +85,7 @@ const Datatable = () => {
                 rowsPerPageOptions={[9]}
                 checkboxSelection
             />
+            <Footer/>
         </div>
     );
 };

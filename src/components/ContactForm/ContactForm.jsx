@@ -103,7 +103,9 @@ const ContactForm = () => {
           <div className="separation-line-form"></div>
           <div>
             <h2>Écrivez moi</h2>
-            <form onSubmit={handleSubmit}>
+            <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="6c8caee3-995b-4ff4-a909-21f8e3595ce2"/>
+            <input type="hidden" name="redirect" value=""/>
               <div className="form-nom-prenom">
                 <div className='form-nom'>
                   <label htmlFor="lastName">Nom<span>*</span> </label>
