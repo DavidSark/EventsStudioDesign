@@ -31,7 +31,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:3001/api/contact", {
+    let response = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8"
