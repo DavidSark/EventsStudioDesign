@@ -7,9 +7,14 @@ import ContactForm from '../ContactForm/ContactForm'
 import DescriptionSection from '../DescriptionSection/DescriptionSection'
 
 import { HashLink as Link } from 'react-router-hash-link';
+import { useEffect } from 'react'
 const Home = () => {
 
-
+    // useEffect(()=>{
+    //     fetch("http://localhost:3001/api")
+    //     .then((res) => res.json())
+    //     .then((data) => {console.log(data)})
+    // },[])
 
     return (
         <div className='home'>
