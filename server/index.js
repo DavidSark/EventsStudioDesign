@@ -1,9 +1,9 @@
-import path from 'path';
-import express from 'express';
-import cors from 'cors';
-import nodemailer from 'nodemailer';
-import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
+const path = require('path');
+const express = require('express');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 dotenv.config();
 
 const PORT = process.env.PORT || 3001;

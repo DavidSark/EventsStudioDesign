@@ -7,7 +7,7 @@
         "path": "^0.12.7"
     },
     "scripts": {
-        "vite": "build"
+        "build": "vite build"
     },
     "engines": {
         "node": "18.16.0",
