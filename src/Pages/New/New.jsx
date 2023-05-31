@@ -8,9 +8,30 @@ import Entete from "../../components/Entete/Entete"
 import Menu from "../../components/Menu/Menu"
 import Footer from "../../components/Footer/Footer"
 import { Link } from "react-router-dom";
-
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from '../../config/firebase'
 
 const New = ({ inputs }) => {
+
+
+  const [authUser, setAuthUser] = useState(null);
+
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user)
+      } else {
+        setAuthUser(null);
+      }
+    })
+
+    return () => {
+      listen();
+    }
+  }, []);
+
+
+
 
   const inputRefs = {
     nom: useRef(null),
@@ -125,7 +146,7 @@ const New = ({ inputs }) => {
     <div className="new-container-parent">
       <Entete />
       <Menu />
-      <div className="zoneadmin-title">
+      {authUser ? <><div className="zoneadmin-title">
         <div className="zoneadmin-line"></div>
         <h2>Ajoutez un nouveau produit</h2>
       </div>
@@ -203,7 +224,7 @@ const New = ({ inputs }) => {
         
       </div>
       
-      <Footer />
+      <Footer /> </> : <div></div>}
     </div>
   );
 };

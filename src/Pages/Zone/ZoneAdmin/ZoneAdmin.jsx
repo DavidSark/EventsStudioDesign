@@ -9,8 +9,25 @@ import { db, storage } from '../../../config/firebase';
 import { getDocs, collection, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import Datatable from '../../../components/datatable/Datatable';
-
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from '../../../config/firebase'
 const ZoneAdmin = () => {
+
+  const [authUser, setAuthUser] = useState(null);
+
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user)
+      } else {
+        setAuthUser(null);
+      }
+    })
+
+    return () => {
+      listen();
+    }
+  }, []);
 
 
   const { user, logout } = UserAuth();
@@ -139,7 +156,7 @@ const ZoneAdmin = () => {
     <div className='zoneadmin-main-container'>
       <Entete />
       <Menu />
-      <div className="zoneadmin-title">
+      {authUser ? <>  <div className="zoneadmin-title">
         <div className="zoneadmin-line"></div>
         <h2>Bienvenue</h2>
       </div>
@@ -181,6 +198,7 @@ const ZoneAdmin = () => {
       {/* <button onClick={handleLogout} className=''>
         Logout
       </button> */}
+      </> : <div></div>}
     </div>
   )
 }

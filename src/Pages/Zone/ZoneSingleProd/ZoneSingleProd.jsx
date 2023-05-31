@@ -6,8 +6,28 @@ import { doc, getDoc, updateDoc } from "firebase/firestore";
 import Entete from "../../../components/Entete/Entete";
 import Menu from "../../../components/Menu/Menu";
 import Footer from "../../../components/Footer/Footer";
-
+import { Link } from "react-router-dom";
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from '../../../config/firebase'
 const ZoneSingleProd = () => {
+
+  const [authUser, setAuthUser] = useState(null);
+
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user)
+      } else {
+        setAuthUser(null);
+      }
+    })
+
+    return () => {
+      listen();
+    }
+  }, []);
+
+
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [updatedData, setUpdatedData] = useState({
@@ -80,62 +100,89 @@ const ZoneSingleProd = () => {
     <div className="zone-single-prodict-parent">
       <Entete />
       <Menu />
-      <div className="zoneadmin-title">
+      {authUser ? <> <div className="zoneadmin-title">
         <div className="zoneadmin-line"></div>
         <h2>Modifier un produit existant</h2>
       </div>
 
-      <form onSubmit={handleSubmit} className="zone-single-product">
-        <div className="zone-single-product-img">
-          <img src={product.img} alt={product.name} />
+
+
+      <div className="new">
+        <div className="newContainer">
+          <div className="bottom">
+            <div className="left">
+              <div className="zone-single-product-img">
+                <img src={product.img} alt={product.name} />
+              </div>
+            </div>
+            <div className="right">
+              <form onSubmit={handleSubmit} className="form-gap-single">
+
+                
+                  <p>
+                    Nom: <span>{product.nom}</span>
+                  </p>
+                  <input
+                    type="text"
+                    placeholder="Changer le nom"
+                    name="nom"
+                    value={updatedData.nom}
+                    onChange={handleInputChange}
+                  />
+
+                  <p>
+                    Description:  <span>{product.description}</span>
+                  </p>
+                  <textarea
+                    name="description"
+                    placeholder="Changer la description"
+                    value={updatedData.description}
+                    onChange={handleInputChange}
+                  ></textarea>
+
+                  <p>
+                    Prix: <span>{product.prix}€</span>
+                  </p>
+                  <input
+                    type="number"
+                    placeholder="Changer le prix"
+                    name="prix"
+                    value={updatedData.prix}
+                    onChange={handleInputChange}
+                  />
+
+                  <p>
+                    Catégorie: <span>{product.categorie}</span>
+                  </p>
+                  <input
+                    type="text"
+                    name="categorie"
+                    placeholder="Changer la catégorie"
+                    value={updatedData.categorie}
+                    onChange={handleInputChange}
+                  />
+                  <div className="new-btn-container">
+                    <button className="new-btn-send" type="submit">Modifier</button>
+
+                    <Link to="/zoneadmin"><button className="new-btn-back" >Retour</button></Link>
+                  </div>
+      
+              </form>
+            </div>
+          </div>
         </div>
-        <div className="zone-single-product-text">
-          <p>
-            Nom: <br /> <span>{product.nom}</span>
-          </p>
-          <input
-            type="text"
-            name="nom"
-            value={updatedData.nom}
-            onChange={handleInputChange}
-          />
+        {isPopupVisible && <div className="popup">Données mises à jour !</div>}
+      </div>
 
-          <p>
-            Description: <br /> <span>{product.description}</span>
-          </p>
-          <textarea
-            name="description"
-            value={updatedData.description}
-            onChange={handleInputChange}
-          ></textarea>
 
-          <p>
-            Prix: <br /> <span>{product.prix}€</span>
-          </p>
-          <input
-            type="number"
-            name="prix"
-            value={updatedData.prix}
-            onChange={handleInputChange}
-          />
 
-          <p>
-            Catégorie: <br /> <span>{product.categorie}</span>
-          </p>
-          <input
-            type="text"
-            name="categorie"
-            value={updatedData.categorie}
-            onChange={handleInputChange}
-          />
 
-          <button type="submit">Modifier</button>
-        </div>
-      </form>
 
-      {isPopupVisible && <div className="popup">Données mises à jour !</div>}
 
-      <Footer />
+
+     
+
+      <Footer /> </> : <div></div>}
     </div>
   );
 };

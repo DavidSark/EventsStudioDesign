@@ -1,62 +1,71 @@
-.zone-single-product {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    font-family: 'Poppins', 'sans-serif';
-    
-    .zone-single-product-img {
-        img {
-            width: 200px;
-        }
+.zone-single-prodict-parent {
+
+  .new {
+    .popup {
+      position: fixed;
+      top: 150px;
+      right: 10px;
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-family: 'Poppins', 'sans-serif';
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      animation: slideIn 0.3s ease-in-out;
     }
 
-    .zone-single-product-text{
-        margin: 10px 0 30px;
+    .newContainer {
+      .bottom {
+        .right {
+          .form-gap-single {
+            max-width: 280px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+            font-family: 'Poppins', 'sans-serif';
 
-        button{
-            width: 150px;
-            padding: 10px;
-            border: none;
-            background-color: teal;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-           
+            textarea {
+              height: 100px;
+              padding: 5px 5px;
+              resize: vertical;
+            }
+
+            input {
+
+              padding: 5px 5px;
+              border: none;
+
+              border-bottom: 1px solid gray;
+            }
+          }
         }
-       p{
-        padding: 5px 0px;
-        span{
-            font-style: italic;
-        }
+      }
     }
-    }
+  }
 }
 
-.popup {
-    position: fixed;
-    top: 150px;
-    right: 10px;
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-family: 'Poppins', 'sans-serif';
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    animation: slideIn 0.3s ease-in-out;
-  }
-  
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
+
+@media screen and (min-width:768px) {
+  .zone-single-prodict-parent {
+    .new {
+      .popup {
+        font-size: 1rem;
+      }
     }
   }
-  
+}
+
+
+@media screen and (min-width:1440px) {
+  .zone-single-prodict-parent {
+    .new {
+      .popup {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
