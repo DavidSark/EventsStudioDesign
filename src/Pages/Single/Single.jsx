@@ -6,9 +6,13 @@ import { collection, doc, getDoc } from "firebase/firestore";
 import Entete from "../../components/Entete/Entete";
 import Menu from "../../components/Menu/Menu";
 
-
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 const Single = () => {
+  const navigate = useNavigate();
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
 
@@ -34,6 +38,12 @@ const Single = () => {
     return <div>Loading...</div>;
   }
 
+
+
+  const handleNavigate = () => {
+    const contactForm = document.getElementById("contact-single");
+    contactForm.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <div>
       <Entete />
@@ -50,19 +60,26 @@ const Single = () => {
 
         <div className="container-single-right">
           <h2>{product.nom}</h2>
-          <p className="container-single-price">Prix: {product.prix}€</p>
+          <p className="container-single-price">{product.prix}€</p>
           <div className="single-line"></div>
           <p className="container-single-desc">{product.description}</p>
           <div className="single-line"></div>
           <p>Ce produit vous intéresse ?</p>
-          <span>Contactez moi !</span>
+
+          <div className="center-btn-gallery">
+            <button className='btn-gallery' onClick={handleNavigate}>
+              <p>Lorem</p>
+            </button>
+          </div>
           <div className="single-line"></div>
           <p>Tag: {product.categorie}</p>
 
         </div>
-
-
       </div>
+      <div id="contact-single">
+        <ContactForm />
+      </div>
+      <Footer />
     </div>
   );
 };

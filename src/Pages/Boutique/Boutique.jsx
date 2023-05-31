@@ -3,7 +3,7 @@ import Menu from "../../components/Menu/Menu"
 import Footer from "../../components/Footer/Footer"
 import ContactForm from "../../components/ContactForm/ContactForm"
 import './Boutique.scss'
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { React, useEffect, useState } from "react";
 import { db } from "../../config/firebase";
 import { collection, onSnapshot } from "firebase/firestore";
