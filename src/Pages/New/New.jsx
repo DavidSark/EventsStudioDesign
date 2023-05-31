@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../../config/firebase'
 
+
+
 const New = ({ inputs }) => {
 
 

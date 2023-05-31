@@ -49,7 +49,7 @@ const Menu = () => {
           <Link to="/#contact" onClick={handleClick}>
             <span>Contact</span>
           </Link>
-          <Link to="/boutique">
+          <Link to="/boutique" onClick={handleClick}>
             <span>Boutique</span>
           </Link>
           <button

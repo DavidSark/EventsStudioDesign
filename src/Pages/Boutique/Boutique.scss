@@ -1,3 +1,5 @@
+$black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
+
 .grid-container {
   max-width: 800px;
   margin: 50px auto;
@@ -7,13 +9,15 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 50px;
 
+
     .product {
       overflow: hidden;
       margin: 0 20px;
+      border: 1px solid #2A2A2A;
 
       .product-img {
         width: 100%;
-        padding-top: 80%; 
+        padding-top: 80%;
         overflow: hidden;
         position: relative;
 
@@ -23,6 +27,58 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+        }
+      }
+
+      .product-text {
+        padding: 20px;
+        font-family: "Poppins";
+
+        h2 {
+          margin-bottom: 10px;
+          font-weight: 600;
+        }
+
+        p {
+          margin-bottom: 10px;
+        }
+
+        .price-btn-see-more {
+          margin-top: 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .see-more {
+            cursor: pointer;
+            text-decoration: none;
+            border-style: solid;
+            border-width: 1px;
+            background-color: transparent;
+            border-image: $black-gradient 1;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+            font-size: 0.75rem;
+     
+            &:before {
+              content: '';
+              position: absolute;
+              top: 3px;
+              left: -6px;
+              right: 3px;
+              bottom: -6px;
+              border-style: solid;
+              border-width: 1px;
+              border-image: $black-gradient 1;
+              transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+              &:before {
+                transform: translate(4px, -4px);
+              }
+            }
+          }
         }
       }
 
@@ -46,13 +102,13 @@
 }
 
 
-    @media screen and (min-width:1440px) {
+@media screen and (min-width:1440px) {
 
-      .grid-container {
-        max-width: 1240px;
-      }
+  .grid-container {
+    max-width: 1240px;
+  }
 
-      .product-grid {
-        max-width: 1240px;
-      }
-    }
+  .product-grid {
+    max-width: 1240px;
+  }
+}

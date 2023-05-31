@@ -48,9 +48,11 @@ const Boutique = () => {
         <div className="product-text">
           <h2>{product.nom}</h2>
           <p>{product.description.length > 50 ? `${product.description.slice(0, 50)}...` : product.description}</p>
-          <p>{product.categorie}</p>
-          <p>{product.prix}€</p>
-          <p onClick={() => handleProductClick(product.id)}>Voir le produit </p>
+          {/* <p>{product.categorie}</p> */}
+          <div className="price-btn-see-more">
+            <p>{product.prix}€</p>
+            <p className="see-more" onClick={() => handleProductClick(product.id)}>Voir le produit </p>
+          </div>
         </div>
       </div>
     ));
@@ -69,7 +71,7 @@ const Boutique = () => {
       <div className="prestations-title-tagline-gallery">
         <h2>
           Retrouvez tous les produits à louer ici <br />
-          Si l'un de ces produits vous intéresse, contactez moi !
+          Un produit vous intéresse ? Contactez moi !
         </h2>
       </div>
 
