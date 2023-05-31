@@ -56,6 +56,12 @@ const Footer = () => {
     };
 
 
+
+    //fonction pour revenir en haut de la page : 
+    const handleClick = () => {
+        window.scroll(0, 0); // Défilement de la page vers le haut
+        setIsMenuOpen(false); // Fermeture du menu
+      };
     return (
         <div className='footer'>
             <div className='container'>
@@ -126,7 +132,7 @@ const Footer = () => {
 
                             <Link>Politique de confidentialité</Link>
                             <Link>Mentions Légales</Link>
-                            <Link to="/zoneadmin">Zone Privée</Link>
+                            <Link to="/zoneadmin" onClick={handleClick}>Zone Privée</Link>
                             <div className="link-social">
                                 <p>Réseaux</p>
                                 <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank'>facebook</Link>

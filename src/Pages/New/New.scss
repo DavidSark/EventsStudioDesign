@@ -15,19 +15,20 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         z-index: 9999;
         animation: slideIn 0.3s ease-in-out;
-      }
-      
-      @keyframes slideIn {
+    }
+
+    @keyframes slideIn {
         0% {
-          opacity: 0;
-          transform: translateX(100%);
+            opacity: 0;
+            transform: translateX(100%);
         }
+
         100% {
-          opacity: 1;
-          transform: translateX(0);
+            opacity: 1;
+            transform: translateX(0);
         }
-      }
-      
+    }
+
     .newContainer {
         flex: 6;
 
@@ -35,10 +36,9 @@
             border: 1px solid #3A3A3A;
             padding: 40px 0px;
             margin: 20px 10px;
-            display: flex;
             max-width: 800px;
-          
-
+            display: flex;
+            flex-direction: column;
             .left {
                 flex: 1;
                 text-align: center;
@@ -46,8 +46,8 @@
                 img {
                     width: 100px;
                     height: 100px;
-                    border-radius: 50%;
                     object-fit: cover;
+                    margin-bottom: 20px;
                 }
             }
 
@@ -55,14 +55,18 @@
                 flex: 2;
 
                 form {
+                    max-width: 280px;
+                    margin: 0 auto;
                     display: flex;
                     flex-wrap: wrap;
                     gap: 30px;
                     justify-content: space-around;
                     font-family: 'Poppins', 'sans-serif';
+
                     .formInput {
-                        width: 80%;
-                        max-width: 330px;
+                        width: 90%;
+                        max-width: 350px;
+
                         label {
                             display: flex;
                             align-items: center;
@@ -72,13 +76,14 @@
                                 cursor: pointer;
                             }
                         }
-                      
-                        textarea{
+
+                        textarea {
                             width: 100%;
                             height: 100px;
                             padding: 5px 5px;
                             resize: vertical;
                         }
+
                         input {
                             width: 100%;
                             padding: 5px 5px;
@@ -98,69 +103,137 @@
                         cursor: pointer;
                         margin-top: 10px;
 
-                        &:disabled{
+                        &:disabled {
                             background-color: rgba(0, 128, 128, 0.295);
                             cursor: not-allowed;
                         }
-                        
+
                     }
-                    .new-btn-back{
+
+                    .new-btn-back {
                         background-color: #542222;
                     }
                 }
 
-                .new-btn-container{
+                .new-btn-container {
                     display: flex;
                     flex-direction: column;
-                    gap: 40px;
-                    
+                    align-items: center;
+                    gap: 5px;
+
                 }
             }
         }
     }
 }
 
+
+@media screen and (min-width:425px) {
+    .new {
+        .newContainer {
+            .right {
+                form {
+                    max-width: 360px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+
 @media screen and (min-width:768px) {
-    .new {    
-            .notification {
-                font-size: 1rem;
-              }
-        .newContainer {   
-            .bottom {   
+    .new {
+        .notification {
+            font-size: 1rem;
+        }
+
+        .newContainer {
+            .bottom {
+                display: flex;
+                flex-direction: row;
+                padding: 40px 0px;
+                margin: 20px 20px;
+                
                 .right {
-                    form {  
-                    .new-btn-container{
-                        display: flex;
-                        flex-direction: row;
-                        gap: 40px;
+                    form {
+                        max-width: 360px;
+                        margin: 0 auto;
+                        .new-btn-container {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 20px;
+                        }
+                    }
+                }
+
+                .left{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 240px;
+                        height: 340px;
+                        object-fit: cover;
+                        margin-bottom: 20px;
+                        margin-left: 70px;
                     }
                 }
             }
         }
     }
 }
-}
+
+
 @media screen and (min-width:820px) {
-    .new {    
-        .newContainer {   
-            .bottom {   
+    .new {
+        .newContainer {
+            .bottom {
                 border: 1px solid #3A3A3A;
-            padding: 40px 0px;
-            margin: 20px auto;
-            display: flex;
-            max-width: 800px;
+                padding: 40px 0px;
+                margin: 20px auto;
+                display: flex;
+                max-width: 800px;
             }
+            
         }
     }
 }
+
 @media screen and (min-width:1440px) {
-    .new {  
+    .new {
         .notification {
             font-size: 1.5rem;
-          }  
-        .newContainer {   
-            .bottom {   
-            max-width: 1240px;
+        }
+
+        .newContainer {
+            .bottom {
+                max-width: 1240px;
+
+                .right {
+                    form {
+                        max-width: 360px;
+                        margin: 0 auto;
+                        .new-btn-container {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 20px;
+                        }
+                    }
+                }
+
+                .left{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 300px;
+                        height: 400px;
+                        object-fit: cover;
+                        margin-bottom: 0px;
+                        margin-left: 200px;
+                    }
+                }
             }
         }
     }
