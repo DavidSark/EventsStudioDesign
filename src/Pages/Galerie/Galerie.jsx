@@ -40,15 +40,15 @@ const Galerie = () => {
       <Entete />
       <Menu />
       <div className="prestations-title-gallery">
-                    <div className="prestations-line-gallery"></div>
-                    <h2>Galerie</h2>
-                </div>
-                <div className="prestations-title-tagline-gallery">
-                    <h2>
-                        Cotton candy muffin cupcake <br />
-                        sugar plum marzipan pie donut cotton candy.
-                    </h2>
-                </div>
+        <div className="prestations-line-gallery"></div>
+        <h2>Galerie</h2>
+      </div>
+      <div className="prestations-title-tagline-gallery">
+        <h2>
+          Cotton candy muffin cupcake <br />
+          sugar plum marzipan pie donut cotton candy.
+        </h2>
+      </div>
       <div className="instagram-feed">
         <div className="instagram-grid">
           {feed.slice(0, visiblePosts).map((post) => (
@@ -75,8 +75,8 @@ const Galerie = () => {
 
         )}
       </div>
-      <ContactForm/>
-      <Footer/>
+      <ContactForm />
+      <Footer />
     </div>
   )
 }
