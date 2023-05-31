@@ -22,10 +22,21 @@
             }
         }
     
-        .entete-email{
+        .entete-email, .entete-phone{
+            position: relative;
             a{
                 text-decoration: none;
             }
+
+           button{
+            border: none;
+            bottom: 10px;;
+            right: -15px;
+            position: absolute;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+           }
         }
         .tiktok {
             height: 20px;
@@ -58,6 +69,17 @@
         }
     
        
+    }
+
+    .btn-email-input,.btn-phone-input{
+        button{
+            margin-left: 5px;
+            background-color: transparent;
+            border: 1px solid #E7E7E7;
+            padding: 5px 10px;
+            color: #E7E7E7;
+            cursor: pointer;
+        }
     }
     
    

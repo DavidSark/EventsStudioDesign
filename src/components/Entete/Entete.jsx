@@ -93,7 +93,7 @@ const Entete = () => {
           </a>
         </div>
         <div className="separator"></div>
-        <div className="entete-email">
+        
           {user && !editEmail ? (
             <div className="entete-email">
               <a href={`mailto:${user[0].email}`}><h2>{user[0].email}</h2></a>
@@ -102,7 +102,7 @@ const Entete = () => {
             </div>
           ) : (
             authUser && (
-              <div>
+              <div className='btn-email-input'>
                 <input
                   type="email"
                   value={user ? user[0].email : ''}
@@ -114,18 +114,18 @@ const Entete = () => {
               </div>
             )
           )}
-        </div>
+       
         <div className="separator"></div>
-        <div className="entete-phone">
+       
           {user && !editPhone ? (
-            <div>
+            <div className="entete-phone">
               <h2>{user[0].phone}</h2>
               {authUser? <><button onClick={() => setEditPhone(true)}>+</button></> : <p></p>}
               
             </div>
           ) : (
             authUser && (
-              <div>
+              <div className='btn-phone-input'>
                 <input
                   type="tel"
                   value={user ? user[0].phone : ''}
@@ -137,7 +137,7 @@ const Entete = () => {
               </div>
             )
           )}
-        </div>
+      
 
 
 
