@@ -37,7 +37,7 @@ const ContactForm = () => {
           </div>
           <div className="container-phone-mail">
             <div className="phone">
-              <img src="./img/svg/phone.svg" alt="phone icon" />
+              <img src="/img/svg/phone.svg" alt="phone icon" />
 
               {user && user.map((userData) => (
                 <div className="phone" key={userData.id}>
@@ -47,7 +47,7 @@ const ContactForm = () => {
 
             </div>
             <div className="mail">
-              <img src="./img/svg/mail.svg" alt="mail icon" />
+              <img src="/img/svg/mail.svg" alt="mail icon" />
 
               {user && user.map((userData) => (
                 <a href={`mailto:${userData.email}`} key={userData.id}>
@@ -60,19 +60,19 @@ const ContactForm = () => {
           </div>
           <div className="container-form-reseau-icon">
             <div className="container-form-fb">
-              <img src="./img/svg/facebook-black.svg" alt="facebook icon" className="social-icon" />
+              <img src="/img/svg/facebook-black.svg" alt="facebook icon" className="social-icon" />
               <Link to="https://www.facebook.com/" target='_blank'>
                 <p>facebook</p>
               </Link>
             </div>
             <div className="container-form-instagram">
-              <img src="./img/svg/instagram-black.svg" alt="instagram icon" className="social-icon" />
+              <img src="/img/svg/instagram-black.svg" alt="instagram icon" className="social-icon" />
               <Link to="https://www.instagram.com/" target='_blank'>
                 <p>instagram</p>
               </Link>
             </div>
             <div className="container-form-tiktok">
-              <img src="./img/svg/tiktok-black.svg" alt="tiktok icon" className="tiktok" />
+              <img src="/img/svg/tiktok-black.svg" alt="tiktok icon" className="tiktok" />
               <Link to="https://www.tiktok.com/" target='_blank'>
                 <p>tiktok</p>
               </Link>

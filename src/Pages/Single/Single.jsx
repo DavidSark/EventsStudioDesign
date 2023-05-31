@@ -76,6 +76,7 @@ const Single = () => {
 
         </div>
       </div>
+      <ContactForm/>
       <div id="contact-single">
         <ContactForm />
       </div>
