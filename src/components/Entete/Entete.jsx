@@ -101,16 +101,18 @@ const Entete = () => {
              
             </div>
           ) : (
-            <div>
-              <input
-                type="email"
-                value={user ? user[0].email : ''}
-                onChange={(e) => {
-                  setUser((prevUser) => [{ ...prevUser[0], email: e.target.value }]);
-                }}
-              />
-              <button onClick={updateUserEmail}>Enregistrer</button>
-            </div>
+            authUser && (
+              <div>
+                <input
+                  type="email"
+                  value={user ? user[0].email : ''}
+                  onChange={(e) => {
+                    setUser((prevUser) => [{ ...prevUser[0], email: e.target.value }]);
+                  }}
+                />
+                <button onClick={updateUserEmail}>Enregistrer</button>
+              </div>
+            )
           )}
         </div>
         <div className="separator"></div>
@@ -122,17 +124,18 @@ const Entete = () => {
               
             </div>
           ) : (
-            <div>
-              <input
-                type="tel"
-                value={user ? user[0].phone : ''}
-                onChange={(e) => {
-                  setUser((prevUser) => [{ ...prevUser[0], phone: e.target.value }]);
-                }}
-              />
-              <button onClick={updateUserPhone}>Enregistrer</button>
-              
-            </div>
+            authUser && (
+              <div>
+                <input
+                  type="tel"
+                  value={user ? user[0].phone : ''}
+                  onChange={(e) => {
+                    setUser((prevUser) => [{ ...prevUser[0], phone: e.target.value }]);
+                  }}
+                />
+                <button onClick={updateUserPhone}>Enregistrer</button>
+              </div>
+            )
           )}
         </div>
 
