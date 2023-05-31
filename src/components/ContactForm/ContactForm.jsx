@@ -48,15 +48,14 @@ const ContactForm = () => {
             </div>
             <div className="mail">
               <img src="./img/svg/mail.svg" alt="mail icon" />
-              
+
               {user && user.map((userData) => (
-                <a href={`mailto:${userData.email}`}>
-                <div className="phone" key={userData.id}>
-                  <p>{userData.email}</p>
-                </div>
+                <a href={`mailto:${userData.email}`} key={userData.id}>
+                  <div className="phone">
+                    <p>{userData.email}</p>
+                  </div>
                 </a>
               ))}
-              
             </div>
           </div>
           <div className="container-form-reseau-icon">

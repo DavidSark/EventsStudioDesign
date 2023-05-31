@@ -27,7 +27,7 @@ const Entete = () => {
     }
   }, []);
 
-
+//fonction pour se déconnecté
   const logout = () => {
     signOut(auth).then(() => {
       console.log('déconnexion réussi');
@@ -53,7 +53,7 @@ const Entete = () => {
     getUser();
   }, []);
 
-  //fonction pour modifier
+  //fonction pour modifier le numéro de tél
   const updateUserPhone = async () => {
     try {
       const userDocRef = doc(db, 'user', user[0].id);
@@ -65,6 +65,7 @@ const Entete = () => {
     }
   };
 
+  //fonction pour modifier l' email
   const updateUserEmail = async () => {
     try {
       const userDocRef = doc(db, 'user', user[0].id);
