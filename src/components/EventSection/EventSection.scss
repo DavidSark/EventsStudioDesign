@@ -1,8 +1,9 @@
 $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, #F1EABA 19.12%, #F9F6CB 22.11%, #A77D46 49.09%, #F3EEA2 83.06%, #EEE495 86.06%, #E1CC75 90.05%, #CCA642 96.05%, #BF8E22 100.04%);
 
-.event-container-parent{
+.event-container-parent {
     background-color: #24272A;
 }
+
 .event-title-center {
     display: flex;
     flex-direction: column;
@@ -10,8 +11,8 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     align-items: center;
     text-align: center;
     align-self: center;
-    
-    
+
+
 
     h2 {
         font-size: 25px;
@@ -73,6 +74,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 .container-event-item {
     margin-top: 95px;
     margin-bottom: 90;
+
     .event-item {
         display: flex;
         align-items: center;
@@ -103,11 +105,12 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         animation: smooth-rotate .05s forwards;
         transform-origin: center;
     }
-    
+
     @keyframes smooth-rotate {
         0% {
             transform: rotate(0deg);
         }
+
         100% {
             transform: rotate(40deg);
         }
@@ -150,12 +153,13 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 @media screen and (min-width:1024px) {
 
     .event-title-center {
-       
+
         margin-top: 60px;
     }
+
     .event-title-center {
         h2 {
-            font-size: 32px;
+            font-size: 2rem;
             white-space: nowrap;
         }
 
@@ -172,6 +176,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
     .container-event-item {
         margin-top: 90px;
+
         .event-item {
             width: 35vw;
             max-width: 445px;
@@ -188,6 +193,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     .event-list {
         width: 565px;
         padding-right: 20px;
+
         .container-event-item {
             margin-top: 80px;
 
@@ -196,15 +202,18 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
     .event-item {
         font-size: 24px;
+
         span {
             font-size: 60px;
             padding-bottom: 20px;
         }
+
         img {
             margin-left: 0px;
         }
-       
+
     }
+
     .event-container-img {
         display: block;
         margin-top: 120px;
@@ -218,6 +227,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
         position: relative;
         margin-left: 20px;
     }
+
     .event-image {
         display: none;
         width: 40vw;
@@ -242,62 +252,69 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 }
 
 @media screen and (min-width:1440px) {
-
-    .event-container {
-        gap: 140px;
-
-        .container-event-item {
-                 
-            .event-item {
-                width: 35vw;
-                max-width: 565px;
-                font-size: 26px;
-            }
-            .event-item {
-                font-size: 32px;
-
-                span {
-                    font-family: 'Cormorant', 'serif';
-                    font-size: 80px;
-                    padding-bottom: 28px;
+    .event-container-parent {
+        
+    
+        .event-container {
+            gap: 140px;
+           h2{
+            font-size: 2.3rem;
+           }
+            padding: 100px 0 200px;
+            .container-event-item {
+        
+                .event-item {
+                    width: 35vw;
+                    max-width: 565px;
+                    font-size: 26px;
                 }
 
+                .event-item {
+                    font-size: 2rem;
+
+                    span {
+                        font-family: 'Cormorant', 'serif';
+                        font-size: 80px;
+                        padding-bottom: 28px;
+                    }
+
+                }
             }
         }
-    }
 
-    .event-container-img {
-        display: block;
-        margin-top: 120px;
-        width: 40vw;
-        max-width: 370px;
-            height: 540px;
-        border-style: solid;
-        border-width: 1px;
-        border-image: $gradient 1;
-        background-color: transparent;
-        position: relative;
-        margin-left: 20px;
-    }
-
-    .event-image {
-        display: none;
-
-        width: 40vw;
-        max-width: 370px;
-        height: 540px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: -12px;
-        left: 10px;
-
-        img {
+        .event-container-img {
+            display: block;
+            margin-top: 120px;
             width: 40vw;
             max-width: 370px;
             height: 540px;
+            border-style: solid;
+            border-width: 1px;
+            border-image: $gradient 1;
+            background-color: transparent;
+            position: relative;
+            margin-left: 20px;
         }
-    }
 
+        .event-image {
+            display: none;
+
+            width: 40vw;
+            max-width: 370px;
+            height: 540px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -12px;
+            left: 10px;
+
+            img {
+                width: 40vw;
+                max-width: 370px;
+                height: 540px;
+            }
+        }
+
+    }
 }
