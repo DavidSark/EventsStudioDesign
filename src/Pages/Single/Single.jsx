@@ -64,7 +64,7 @@ const Single = () => {
           <div className="single-line"></div>
           <p className="container-single-desc">{product.description}</p>
           <div className="single-line"></div>
-          <p>Ce produit vous intéresse ? N'attendez plus</p>
+          <p className="container-single-desc">Ce produit vous intéresse ? N'attendez plus</p>
 
       
             <button className='btn-single-contact' onClick={handleNavigate}>
