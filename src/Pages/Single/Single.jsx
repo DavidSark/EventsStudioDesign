@@ -64,13 +64,13 @@ const Single = () => {
           <div className="single-line"></div>
           <p className="container-single-desc">{product.description}</p>
           <div className="single-line"></div>
-          <p>Ce produit vous intéresse ?</p>
+          <p>Ce produit vous intéresse ? N'attendez plus</p>
 
-          <div className="center-btn-gallery">
-            <button className='btn-gallery' onClick={handleNavigate}>
-              <p>Lorem</p>
+      
+            <button className='btn-single-contact' onClick={handleNavigate}>
+              <p>Contactez moi !</p>
             </button>
-          </div>
+        
           <div className="single-line"></div>
           <p>Tag: {product.categorie}</p>
 
