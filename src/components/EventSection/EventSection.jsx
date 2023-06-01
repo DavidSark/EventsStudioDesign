@@ -7,7 +7,7 @@ import './EventSection.scss';
 const EventList = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
 
-    const events = ['Mariage', 'Anniversaire', 'Gender', 'Religion'];
+    const events = ['Mariage', 'Anniversaire', 'Gender Reveal', 'Religion'];
 
     const handleEventHover = (event) => {
         setSelectedEvent(event);
