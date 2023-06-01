@@ -13,7 +13,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         visibility: hidden;
 }
 .container-home {
-    background-image: linear-gradient(to bottom, #E7E7E7 10vh, #E7E7E7 0%, #24272A 0%, #24272A 60%);
+    background-image: linear-gradient(to bottom, #E7E7E7 10vh, #E7E7E7 0%, #24272A 0%, #24272A 70%);
     height: 100vh;
    
 }
@@ -67,7 +67,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     h2 {
         font-family: 'Cormorant', 'serif';
         font-weight: bold;
-        line-height: 1.5;
+        line-height: 1.2;
         text-transform: uppercase;
         margin: 20px 10px 10px 10px;
         text-align: center;
@@ -256,19 +256,22 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
                 max-width: 800px;
                 font-size: 2rem;
             }
-            .container-discover{
-
-                img{
-                    margin: 30px 0px;
-                }
-                .btn-decouvrir{
-                    font-size: 24px;
-                }
-            }
         }
     }
 }
 
+
+@media screen and (min-width:1440px) {
+    .home {
+        .container-text {
+          
+            h2 {
+                font-size:2.5rem;
+                max-width: 1240px;
+            }
+        }
+    }
+}
 
 @media screen and (min-width:1536px) {
     .home {
@@ -278,18 +281,11 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
                 font-size:3.5rem;
                 max-width: 1240px;
             }
-            .container-discover{
-
-                img{
-                    margin: 30px 0px;
-                }
-                .btn-decouvrir{
-                    font-size: 24px;
-                }
-            }
         }
     }
 }
+
+
 
 
 
@@ -317,6 +313,15 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     .home {
         .container-home {
             background-image: linear-gradient(to bottom, #E7E7E7 38vh, #E7E7E7 0%, #24272A 0%, #24272A 85%)
+        }
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    .home {
+        .container-home {
+            background-image: linear-gradient(to bottom, #E7E7E7 38vh, #E7E7E7 0%, #24272A 0%, #24272A 85%);
+            padding-bottom:30px 
         }
     }
 }
