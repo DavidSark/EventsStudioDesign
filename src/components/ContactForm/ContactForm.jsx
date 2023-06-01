@@ -32,8 +32,8 @@ const ContactForm = () => {
 
         <div className="container-form">
           <div className="container-speak">
-            <h2>Parlons-en</h2>
-            <p>Cotton candy muffin cupcake sugar plum marzipan </p>
+            <h2>Contactez moi !</h2>
+            <p>Je serai ravi de répondre et de travailler avec vous, afin de créer un événement exceptionnel</p>
           </div>
           <div className="container-phone-mail">
             <div className="phone">

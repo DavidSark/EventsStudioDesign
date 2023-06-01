@@ -6,6 +6,7 @@ import ContactForm from '../ContactForm/ContactForm'
 import DescriptionSection from '../DescriptionSection/DescriptionSection'
 
 import { HashLink as Link } from 'react-router-hash-link';
+import SectionBoutique from '../SectionBoutique/SectionBoutique'
 
 const Home = () => {
     return (
@@ -33,6 +34,7 @@ const Home = () => {
             <div id="entreprise">
                 <DescriptionSection />
             </div>
+            <SectionBoutique/>
             <div className='event-section-bg' id='mariage'>
                 <EventSection />
             </div>

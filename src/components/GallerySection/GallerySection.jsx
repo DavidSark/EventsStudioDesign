@@ -30,15 +30,14 @@ const GallerySection = () => {
                             <div className="container-gallery-text-line"></div>
                             <h2>Galerie</h2>
 
-                            <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.</p> <br /><br /><br />
+                            <p>Explorez la galerie d'images, captivante de créativité et d'inspiration. Plongez dans un monde d'esthétique visuelle, où chaque cliché raconte une histoire unique et évoque des émotions profondes.</p> <br /><br /><br />
 
-                            <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.
-                                Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet </p>
-
+                            <p>  Retrouvez en image les décorations réalisées par mes soins et par vous dans la galerie !</p>
+                           
 
                             <div className="center-btn-gallery">
                                 <Link to="/galerie" className='btn-gallery' onClick={handleClick}>
-                                    <p>Lorem</p>
+                                    <p>Visiter la galerie</p>
                                 </Link>
                             </div>
                             <div className="container-gallery-text-line"></div>
