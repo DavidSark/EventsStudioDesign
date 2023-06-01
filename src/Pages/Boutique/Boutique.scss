@@ -48,8 +48,10 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
           display: flex;
           justify-content: space-between;
           align-items: center;
+          color: #c02c2c;
           .see-more {
             cursor: pointer;
+            color: #2A2A2A;
             text-decoration: none;
             border-style: solid;
             border-width: 1px;

@@ -50,7 +50,7 @@ const Single = () => {
       <Menu />
       <div className="prestations-title-gallery">
         <div className="prestations-line-gallery"></div>
-        <h2>{product.nom}</h2>
+        <h2>{product.categorie}</h2>
       </div>
       <div className="container-single">
 

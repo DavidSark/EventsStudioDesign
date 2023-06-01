@@ -43,6 +43,7 @@ const Menu = () => {
           <img className="logo" src="/img/svg/ESD_Logo.svg" alt="" />
         </Link>
         <nav ref={navRef} className={isMenuOpen ? 'responsive_nav' : ''}>
+        <Link to="/" onClick={handleClick}>Accueil</Link>
           <Link to="/prestations" onClick={handleClick}>Prestations</Link>
           <Link to="/galerie" onClick={handleClick}>Galerie</Link>
           <Link to="/#entreprise" onClick={handleClick}>L'entreprise</Link>
