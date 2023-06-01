@@ -61,19 +61,19 @@ const ContactForm = () => {
           <div className="container-form-reseau-icon">
             <div className="container-form-fb">
               <img src="/img/svg/facebook-black.svg" alt="facebook icon" className="social-icon" />
-              <Link to="https://www.facebook.com/" target='_blank'>
+              <Link to="https://www.facebook.com/" target='_blank' rel="noopener noreferrer" >
                 <p>facebook</p>
               </Link>
             </div>
             <div className="container-form-instagram">
               <img src="/img/svg/instagram-black.svg" alt="instagram icon" className="social-icon" />
-              <Link to="https://www.instagram.com/" target='_blank'>
+              <Link to="https://www.instagram.com/" target='_blank'  rel="noopener noreferrer">
                 <p>instagram</p>
               </Link>
             </div>
             <div className="container-form-tiktok">
               <img src="/img/svg/tiktok-black.svg" alt="tiktok icon" className="tiktok" />
-              <Link to="https://www.tiktok.com/" target='_blank'>
+              <Link to="https://www.tiktok.com/" target='_blank'  rel="noopener noreferrer">
                 <p>tiktok</p>
               </Link>
             </div>

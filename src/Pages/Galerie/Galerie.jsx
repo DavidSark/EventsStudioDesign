@@ -53,7 +53,7 @@ const Galerie = () => {
         <div className="instagram-grid">
           {feed.slice(0, visiblePosts).map((post) => (
             <div key={post.id} className="instagram-item">
-              <a href={post.permalink} target="_blank" rel="noreferrer">
+              <a href={post.permalink} target="_blank"  rel="noopener noreferrer">
                 {post.media_type === "VIDEO" ? (
                   <video src={post.media_url} alt="Instagram post" muted autoPlay loop />
                 ) : (

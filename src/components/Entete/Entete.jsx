@@ -82,14 +82,14 @@ const Entete = () => {
     <div className="entete-parent">
       <div className='entete'>
         <div className='bloc-social-icon'>
-          <a href="https://www.facebook.com/profile.php?id=100063230651252" target='_blank'>
+          <a href="https://www.facebook.com/profile.php?id=100063230651252" target='_blank' rel="noopener noreferrer">
             <img src="/img/svg/facebook.svg" alt="Facebook icon" className="social-icon" />
           </a>
 
-          <a href="https://www.instagram.com/eventsstudiodesign/" target='_blank'>
+          <a href="https://www.instagram.com/eventsstudiodesign/" target='_blank' rel="noopener noreferrer">
             <img src="/img/svg/instagram.svg" alt="Instagram icon" className="social-icon" />
           </a>
-          <a href="https://www.tiktok.com/@eventsstudiodesign" target='_blank'>
+          <a href="https://www.tiktok.com/@eventsstudiodesign" target='_blank' rel="noopener noreferrer">
             <img src="/img/svg/tiktok.svg" alt="Tiktok icon" className="tiktok" />
           </a>
         </div>
