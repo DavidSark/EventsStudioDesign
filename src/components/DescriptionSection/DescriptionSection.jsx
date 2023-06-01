@@ -22,15 +22,15 @@ const DescriptionSection = () => {
                         <div className="container-desc-text">
                             <div className="container-desc-text-line"></div>
                             <h2>Qui suis-je ?</h2>
-                            <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.</p> <br /><br /><br />
+                            <p>Bienvenue dans mon univers de la décoration ! Je suis Mariam, et votre partenaire idéal pour donner vie à votre imaginaine et créer des souvenirs inoubliables lors d'événement spéciaux.</p> <br /><br />
 
-                            <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.
-                                Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet </p>
+                            <p>Je suis une décoratrice événementielle passionnée, dévouée à l'art de transformer des espaces ordinaires en lieux extraordinaires, reflétant votre style unique et vos préférences..<br/>
+                            Mon objectif est de vous offrir une expérience sans égale et sans stress, où vous pouvez vous détendre et profiter pleinement de votre événement, tout en sachant que chaque détail est pris en charge. </p>
 
 
                             <div className="center-btn-desc">
                                 <Link to="/#contact" className='btn-desc'>
-                                    <p>Lorem</p>
+                                    <p>Me contacter</p>
                                 </Link>
                             </div>
 

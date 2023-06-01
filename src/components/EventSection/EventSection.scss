@@ -10,7 +10,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     align-items: center;
     text-align: center;
     align-self: center;
-    margin-top: 60px;
+    
     
 
     h2 {
@@ -34,6 +34,7 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
     justify-content: center;
     background-color: #24272A;
     max-width: 1240px;
+    height: 600px;
     margin: 0 auto;
     padding-bottom: 60px;
 }
@@ -70,13 +71,12 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 
 
 .container-event-item {
-    margin-top: 50px;
-
+    margin-top: 95px;
+    margin-bottom: 90;
     .event-item {
         display: flex;
         align-items: center;
         cursor: pointer;
-
         width: 80vw;
         max-width: 565px;
         font-family: 'Cormorant', 'serif';
@@ -148,6 +148,11 @@ $gradient: linear-gradient(90deg, #A8791B 0.13%, #BD9A4A 5.13%, #DDCB8F 13.12%, 
 }
 
 @media screen and (min-width:1024px) {
+
+    .event-title-center {
+       
+        margin-top: 60px;
+    }
     .event-title-center {
         h2 {
             font-size: 32px;
