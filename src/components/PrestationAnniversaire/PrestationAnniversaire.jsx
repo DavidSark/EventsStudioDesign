@@ -14,7 +14,7 @@ const PrestationAnniversaire = () => {
                     </div>
                     <div className="prestation-tagline-text-02">
                         <p>
-                            Cotton candy muffin cupcake sugar plum marzipan pie.
+                        Votre anniversaire sublimé par la décoration.
                         </p>
                     </div>
 
@@ -23,17 +23,17 @@ const PrestationAnniversaire = () => {
                     </div>
 
                     <div className="prestation-text-02">
-                        <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.
+                        <p>Un anniversaire intime ou une célébration grandiose, je suis là pour créer une ambiance unique et mémorable!
                             <br /><br />
 
-                            Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.<br />
-                            Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet
+                            Petit ou grand, il n'y a pas d'âge pour célébrer de tout coeur un anniversaire avec ses proches.<br/>
+                            Que vous envisagiez une fête surprise, une soirée à thème ou une célébration plus personnelle, je m'occuperais avec joie de tous les détails pour que vous puissiez profiter pleinement de votre fête. 
 
                         </p>
 
                         <div className="prestation-center-btn-desc-anniv">
                             <Link to="/prestations#contact-prestation" className='prestation-btn'>
-                                <p>Lorem</p>
+                                <p>En savoir plus</p>
                             </Link>
                         </div>
                     </div>

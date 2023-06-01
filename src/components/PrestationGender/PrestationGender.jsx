@@ -14,7 +14,7 @@ const PrestationGender = () => {
           </div>
           <div className="prestation-tagline-text-03">
             <p>
-              Cotton candy muffin cupcake sugar plum marzipan pie.
+              Une explosion de bonheur et de couleurs !
             </p>
           </div>
 
@@ -23,17 +23,16 @@ const PrestationGender = () => {
           </div>
 
           <div className="prestation-text-03">
-            <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.
+            <p>Il n'y a rien de plus beau que la naissance de son futur enfant.
               <br /><br />
 
-              Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.<br />
-              Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet
+              Que ce soit une explosion de confettis de couleurs ou une pluie de ballons colorés, dévoilez le sexe de votre bébé dans une ambiance festive et inoubliable à vos proche.
 
             </p>
 
             <div className="prestation-center-btn-desc-gender">
               <Link to="/prestations#contact-prestation" className='prestation-btn'>
-                <p>Lorem</p>
+                <p>En savoir plus</p>
               </Link>
             </div>
           </div>

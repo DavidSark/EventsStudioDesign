@@ -2,9 +2,9 @@ import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
 import './PrestationReligion.scss'
 const PrestationReligion = () => {
-  return (
-    <div className="container_prestation-04">
-         <div className="anchor" id='religion'></div>
+    return (
+        <div className="container_prestation-04">
+            <div className="anchor" id='religion'></div>
             <div className='container-prestation-parent-religion'>
                 <div className="container-prestation-text-religion">
                     <div className='prestation-title-04'>
@@ -14,7 +14,7 @@ const PrestationReligion = () => {
                     </div>
                     <div className="prestation-tagline-text-04">
                         <p>
-                            Cotton candy muffin cupcake sugar plum marzipan pie.
+                            Des traditions honorées
                         </p>
                     </div>
 
@@ -23,17 +23,16 @@ const PrestationReligion = () => {
                     </div>
 
                     <div className="prestation-text-04">
-                        <p>Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.
+                        <p>Créer un espace sacré où la spiritualité et la foi se rencontrent.
                             <br /><br />
-
-                            Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet chocolate bar powder toffee sweet roll topping tiramisu marzipan. Jelly beans pie sugar plum jelly beans sesame snaps wafer. Chupa chups jelly bonbon liquorice cake.<br />
-                            Cotton candy muffin cupcake sugar plum marzipan pie donut cotton candy. Sweet
-
+                            Que ce soit pour une communion, un baptême, une circoncision ou toute autre célébration spirituelle, il est important de célébrer ces traditions.
+                            <br/>
+                            À travers ces décorations, laissez votre créer un enverionnement pour que votre foi s'exprime.
                         </p>
 
                         <div className="prestation-center-btn-desc-religion">
                             <Link to="/prestations#contact-prestation" className='prestation-btn'>
-                                <p>Lorem</p>
+                                <p>En savoir plus</p>
                             </Link>
                         </div>
                     </div>
@@ -47,7 +46,7 @@ const PrestationReligion = () => {
                 <div className="line-prestation-separation-religion"></div>
             </div>
         </div>
-  )
+    )
 }
 
 export default PrestationReligion

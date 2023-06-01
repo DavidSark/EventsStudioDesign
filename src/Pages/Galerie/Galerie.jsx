@@ -48,7 +48,7 @@ const Galerie = () => {
         <h2>Galerie</h2>
       </div>
       <div className="prestations-title-tagline-gallery">
-        <h2>Cotton candy muffin cupcake <br /> sugar plum marzipan pie donut cotton candy.</h2>
+        <h2>Explorez la galerie et laissez-vous <br /> séduire par mes réalisations.</h2>
       </div>
       <div className="instagram-feed">
         <div className="instagram-grid">

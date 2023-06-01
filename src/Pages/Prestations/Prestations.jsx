@@ -7,6 +7,7 @@ import PrestationMariage from '../../components/PrestationMariage/PrestationMari
 import PrestationAnniversaire from '../../components/PrestationAnniversaire/PrestationAnniversaire'
 import PrestationGender from '../../components/PrestationGender/PrestationGender'
 import PrestationReligion from '../../components/PrestationReligion/PrestationReligion'
+import Footer from '../../components/Footer/Footer'
 //import feuille de style
 import '../Global.scss'
 import './Prestations.scss'
@@ -27,8 +28,8 @@ const Prestations = () => {
                 </div>
                 <div className="prestations-title-tagline">
                     <h2>
-                        Cotton candy muffin cupcake <br />
-                        sugar plum marzipan pie donut cotton candy.
+                        Découvrez les différentes prestations<br />
+                        et événements à votre disposition.
                     </h2>
                 </div>
                 <div className="home">
@@ -48,6 +49,8 @@ const Prestations = () => {
                 <div id="contact-prestation">
                     <ContactForm />
                 </div>
+
+                <Footer/>
             </div>
         </div>
     )

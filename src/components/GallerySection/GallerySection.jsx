@@ -32,7 +32,7 @@ const GallerySection = () => {
 
                             <p>Explorez la galerie d'images, captivante de créativité et d'inspiration. Plongez dans un monde d'esthétique visuelle, où chaque cliché raconte une histoire unique et évoque des émotions profondes.</p> <br /><br /><br />
 
-                            <p>  Retrouvez en image les décorations réalisées par mes soins et par vous dans la galerie !</p>
+                            <p>  Retrouvez en image les décorations réalisées par mes soins dans la galerie !</p>
                            
 
                             <div className="center-btn-gallery">

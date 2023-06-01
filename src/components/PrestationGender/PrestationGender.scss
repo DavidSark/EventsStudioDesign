@@ -128,7 +128,7 @@ background-color: #24272A;
         background-color: transparent;
         border-image: $white-gradient 1;
         position: relative;
-        padding: 10px 65px;
+        padding: 10px 40px;
         transition: all 0.3s ease-in-out;
         font-size: 1rem;
         font-weight: bold;
@@ -199,16 +199,13 @@ justify-content: center;
     }
 }
 
-@media screen and (min-width:728px) {
-    .container-prestation-parent-gender {
-        padding: 0 20px;
-    }
-
-}
 
 @media screen and (min-width:728px) {
     .container-prestation-parent-gender {
         margin-bottom: 40px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
     }
 
     .prestation-title-03,
@@ -306,5 +303,14 @@ justify-content: center;
        
         height: 1px;
         background-color: #E7E7E7;
+    }
+}
+
+
+@media screen and (min-width:1600px) {
+
+    .container-prestation-parent-gender {
+     
+        padding: 60px 0;
     }
 }

@@ -134,7 +134,7 @@ $white_gradient: linear-gradient(90deg, #e7e7e7 0%, #e7e7e7 100%);
         background-color: transparent;
         border-image: $white_gradient 1;
         position: relative;
-        padding: 10px 65px;
+        padding: 10px 40px;
         transition: all 0.3s ease-in-out;
         font-size: 1rem;
         font-weight: bold;
@@ -205,16 +205,13 @@ justify-content: center;
     }
 }
 
-@media screen and (min-width:728px) {
-    .container-prestation-parent-mariage {
-        padding: 0 20px;
-    }
-
-}
 
 @media screen and (min-width:728px) {
     .container-prestation-parent-mariage {
         margin-bottom: 40px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
     }
 
     .prestation-title-01,
@@ -261,7 +258,7 @@ justify-content: center;
         max-width: 1240px;
         margin: 0 auto;
         justify-content: space-between;
-        padding: 0;
+        padding: 0px;
     }
 
     .prestation-img-right-mariage {
@@ -309,5 +306,14 @@ justify-content: center;
         max-width: 1240px;
         height: 1px;
         background-color: #E7E7E7;
+    }
+}
+
+
+@media screen and (min-width:1600px) {
+
+    .container-prestation-parent-mariage {
+ 
+        padding: 60px 0;
     }
 }
