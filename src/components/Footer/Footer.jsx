@@ -61,7 +61,7 @@ const Footer = () => {
     const handleClick = () => {
         window.scroll(0, 0); // Défilement de la page vers le haut
         setIsMenuOpen(false); // Fermeture du menu
-      };
+    };
     return (
         <div className='footer'>
             <div className='container'>
@@ -119,24 +119,24 @@ const Footer = () => {
                     <div className="right-prestations-website">
                         <div className='link-prestations'>
                             <p>Préstations</p>
-                            <Link>Mariage</Link>
-                            <Link>Anniversaire</Link>
-                            <Link>Gender Reveal</Link>
-                            <Link>Foi & Religion</Link>
-                            <Link>Galerie</Link>
-                            <Link>Contact</Link>
+                            <Link to="prestations#mariage">Mariage</Link>
+                            <Link to="prestations/#anniversaire">Anniversaire</Link>
+                            <Link to="prestations/#gender">Gender Reveal</Link>
+                            <Link to="prestations/#religion">Foi & Religion</Link>
+                            <Link to="/galerie" onClick={handleClick}>Galerie</Link>
+                            <Link to="/#contact">Contact</Link>
                         </div>
 
                         <div className='link-website'>
                             <p>Légal</p>
 
-                            <Link>Politique de confidentialité</Link>
-                            <Link>Mentions Légales</Link>
+                            <Link to="/politique" onClick={handleClick}>Politique de confidentialité</Link>
+                            <Link to="/mentions" onClick={handleClick}>Mentions Légales</Link>
                             <Link to="/zoneadmin" onClick={handleClick}>Zone Privée</Link>
                             <div className="link-social">
                                 <p>Réseaux</p>
-                                <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank'  rel="noopener noreferrer">facebook</Link>
-                                <Link to="https://www.instagram.com/eventsstudiodesign/" target='_blank'  rel="noopener noreferrer">instagram</Link>
+                                <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank' rel="noopener noreferrer">facebook</Link>
+                                <Link to="https://www.instagram.com/eventsstudiodesign/" target='_blank' rel="noopener noreferrer">instagram</Link>
                                 <Link to="https://www.tiktok.com/@eventsstudiodesign" target='_blank' rel="noopener noreferrer">tiktok</Link>
 
                             </div>
