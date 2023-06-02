@@ -142,6 +142,8 @@ const ContactForm = () => {
             <h2>Écrivez moi</h2>
             <form onSubmit={handleSubmit} >
               <input type="hidden" name="access_key" value={accessKey} />
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
               <div className="form-nom-prenom">
                 <div className='form-nom'>
                   <label htmlFor="lastName">Nom<span>*</span> </label>
