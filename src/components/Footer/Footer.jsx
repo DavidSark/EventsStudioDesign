@@ -68,8 +68,8 @@ const Footer = () => {
 
                 <div className="left">
                     <div className='left-text'>
-                        <h1>titre</h1>
-                        <p>tagline</p>
+                        <h1>event's studio design</h1>
+                        <p>décoratrice événementielle basé à Reims et dans le Grand Est</p>
                         {user && !editAdress ? (
                             <div className="footer-adress">
                                 {user.map((userData, index) => (
@@ -135,9 +135,9 @@ const Footer = () => {
                             <Link to="/zoneadmin" onClick={handleClick}>Zone Privée</Link>
                             <div className="link-social">
                                 <p>Réseaux</p>
-                                <Link to="https://www.facebook.com/" target='_blank' rel="noopener noreferrer">facebook</Link>
-                                <Link to="https://www.instagram.com/" target='_blank' rel="noopener noreferrer">instagram</Link>
-                                <Link to="https://www.tiktok.com/" target='_blank' rel="noopener noreferrer">tiktok</Link>
+                                <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank' rel="noopener noreferrer">facebook</Link>
+                                <Link to="https://www.instagram.com/eventsstudiodesign/" target='_blank' rel="noopener noreferrer">instagram</Link>
+                                <Link to="https://www.tiktok.com/@eventsstudiodesign" target='_blank' rel="noopener noreferrer">tiktok</Link>
 
                             </div>
                         </div>
