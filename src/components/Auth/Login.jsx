@@ -1,19 +1,20 @@
 
 import React, {useState} from "react"
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import './Login.scss'
 
 const Login = () => {
   
 
-
+    //useState pour gérer la connexion
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const { signIn } = UserAuth();
   
+    //fonction pour se connecter
     const handleSubmit = async (e) => {
       e.preventDefault();
       setError('')

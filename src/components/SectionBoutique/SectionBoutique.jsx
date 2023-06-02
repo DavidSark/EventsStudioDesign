@@ -3,6 +3,7 @@ import './SectionBoutique.scss'
 import { HashLink as Link } from 'react-router-hash-link';
 
 const SectionBoutique = () => {
+    
     const handleClick = () => {
         window.scroll(0, 0); // Défilement de la page vers le haut
         setIsMenuOpen(false); // Fermeture du menu

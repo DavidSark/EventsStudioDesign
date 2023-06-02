@@ -1,3 +1,4 @@
+//inputes pour le formulaire
 export const productInputs = [
   {
     id: "nom",

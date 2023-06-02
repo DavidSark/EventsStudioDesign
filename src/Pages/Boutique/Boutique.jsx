@@ -1,10 +1,15 @@
+//import de react et des ses fonctions
+import { React, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import './Boutique.scss'
+//import des composants 
 import Entete from "../../components/Entete/Entete"
 import Menu from "../../components/Menu/Menu"
 import Footer from "../../components/Footer/Footer"
 import ContactForm from "../../components/ContactForm/ContactForm"
-import './Boutique.scss'
-import { useNavigate } from "react-router-dom";
-import { React, useEffect, useState } from "react";
+
+
+//import des besoins pour la bdd direbase
 import { db } from "../../config/firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 

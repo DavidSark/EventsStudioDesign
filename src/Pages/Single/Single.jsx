@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "./Single.scss";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { db } from "../../config/firebase";
-import { collection, doc, getDoc } from "firebase/firestore";
+import "./Single.scss";
+
+//import composants
 import Entete from "../../components/Entete/Entete";
 import Menu from "../../components/Menu/Menu";
-
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import ContactForm from "../../components/ContactForm/ContactForm";
+
+//Import des besoins pour la bdd firebase
+import { db } from "../../config/firebase";
+import { doc, getDoc } from "firebase/firestore";
+
+
 
 const Single = () => {
   const navigate = useNavigate();

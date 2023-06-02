@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NotFound = () => {
   return (
     <div className='container-404'>
-      <img src="img/svg/logo_noir.svg" alt="" />
+      <img src="/img/svg/logo_noir.svg" alt="logo" />
       <h1>event studio design</h1>
       <p className='error-404'>Erreur <span>404</span></p>
       <p className='text-404'>Il semblerait que vous êtes perdu</p>

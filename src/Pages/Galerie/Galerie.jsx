@@ -9,9 +9,11 @@ import Footer from '../../components/Footer/Footer';
 import ContactForm from '../../components/ContactForm/ContactForm';
 
 const Galerie = () => {
+  //useState pour les état du feed et des postes visibles
   const [feed, setFeed] = useState([]);
   const [visiblePosts, setVisiblePosts] = useState(6);
 
+  //fonction pour appelé le token insta et ramener le feed insta
   useEffect(() => {
     const access_token = import.meta.env.VITE_ACCESS_TOKEN;
     const url = `https://graph.instagram.com/me/media?fields=media_count,permalink,media_url,caption,thumbnail_url,media_type&access_token=${access_token}`;
@@ -36,7 +38,7 @@ const Galerie = () => {
     setVisiblePosts((prev) => prev + 6);
   };
 
-  // Filtrer la publication spécifique à exclure
+  // Filtrer la publication spécifique à exclure car bug
   const filteredFeed = feed.filter((post) => post.permalink !== 'https://www.instagram.com/p/Cswsq6uADns/');
 
   return (

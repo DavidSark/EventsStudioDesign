@@ -6,6 +6,7 @@ import { db } from "../../config/firebase"
 import { collection, getDocs } from "firebase/firestore";
 
 
+//fonction pour l'envoie du formulaire
 const ContactForm = () => {
 
   const accessKey =  import.meta.env.VITE_ACCESS_MAIL;
@@ -42,8 +43,6 @@ const ContactForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Autres actions à effectuer lors de la soumission du formulaire avec Web3Form
-
     try {
       // Soumission du formulaire à l'aide de Web3Form
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -72,12 +71,12 @@ const ContactForm = () => {
     }
   };
 
-
+//useEffect pour la popup 
   useEffect(() => {
     if (showSuccessPopup) {
       const timer = setTimeout(() => {
         setShowSuccessPopup(false);
-      }, 5000); // Temps en millisecondes avant de masquer la pop-up (ici 3 secondes)
+      }, 5000); 
 
       return () => clearTimeout(timer);
     }
@@ -89,7 +88,7 @@ const ContactForm = () => {
 
         <div className="container-form">
           <div className="container-speak">
-            <h2>Contactez moi !</h2>
+            <h2>Me contacter :</h2>
             <p>Je serai ravi de répondre et de travailler avec vous, afin de créer un événement exceptionnel</p>
           </div>
           <div className="container-phone-mail">
@@ -118,19 +117,19 @@ const ContactForm = () => {
           <div className="container-form-reseau-icon">
             <div className="container-form-fb">
               <img src="/img/svg/facebook-black.svg" alt="facebook icon" className="social-icon" />
-              <Link to="https://www.facebook.com/" target='_blank' rel="noopener noreferrer" >
+              <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank' rel="noopener noreferrer" >
                 <p>facebook</p>
               </Link>
             </div>
             <div className="container-form-instagram">
               <img src="/img/svg/instagram-black.svg" alt="instagram icon" className="social-icon" />
-              <Link to="https://www.instagram.com/" target='_blank' rel="noopener noreferrer">
+              <Link to="https://www.instagram.com/eventsstudiodesign/" target='_blank' rel="noopener noreferrer">
                 <p>instagram</p>
               </Link>
             </div>
             <div className="container-form-tiktok">
               <img src="/img/svg/tiktok-black.svg" alt="tiktok icon" className="tiktok" />
-              <Link to="https://www.tiktok.com/" target='_blank' rel="noopener noreferrer">
+              <Link to="https://www.tiktok.com/@eventsstudiodesign" target='_blank' rel="noopener noreferrer">
                 <p>tiktok</p>
               </Link>
             </div>
@@ -139,7 +138,7 @@ const ContactForm = () => {
         <div className="container-info-form">
           <div className="separation-line-form"></div>
           <div>
-            <h2>Écrivez moi</h2>
+            <h2>M'écrire :</h2>
             <form onSubmit={handleSubmit} >
               <input type="hidden" name="access_key" value={accessKey} />
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />

@@ -8,13 +8,15 @@ import PrestationAnniversaire from '../../components/PrestationAnniversaire/Pres
 import PrestationGender from '../../components/PrestationGender/PrestationGender'
 import PrestationReligion from '../../components/PrestationReligion/PrestationReligion'
 import Footer from '../../components/Footer/Footer'
+import ContactForm from '../../components/ContactForm/ContactForm'
+
+
 //import feuille de style
 import '../Global.scss'
 import './Prestations.scss'
 
 
-import { HashLink as Link } from 'react-router-hash-link';
-import ContactForm from '../../components/ContactForm/ContactForm'
+
 
 const Prestations = () => {
     return (
@@ -34,10 +36,10 @@ const Prestations = () => {
                 </div>
                 <div className="home">
                     <div className="container-img">
-                        <img className='resize-img' src="./img/image_home.png" alt="d'accueil" />
+                        <img className='resize-img' src="/img/image_home.png" alt="d'accueil" />
                         <div className="container-img-text">
                             <h1 className='title'>event's studio design</h1>
-                            <img src="./img/svg/logo_doré.svg" alt="logo events studio design" />
+                            <img src="/img/svg/logo_doré.svg" alt="logo events studio design" />
                         </div>
                     </div>
                 </div>

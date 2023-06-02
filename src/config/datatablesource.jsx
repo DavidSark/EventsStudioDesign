@@ -1,3 +1,4 @@
+//mis en place des éléments pour le tableau de mui
 export const productColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {

@@ -5,12 +5,15 @@ import './ZoneAdmin.scss'
 //import des composants
 import Entete from '../../../components/Entete/Entete'
 import Menu from '../../../components/Menu/Menu'
+import Datatable from '../../../components/datatable/Datatable';
+
+//import des besoins de la bdd
 import { db, storage } from '../../../config/firebase';
 import { getDocs, collection, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import Datatable from '../../../components/datatable/Datatable';
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../../../config/firebase'
+
 const ZoneAdmin = () => {
 
   const [authUser, setAuthUser] = useState(null);

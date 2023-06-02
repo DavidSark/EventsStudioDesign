@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-
 import { HashLink as Link } from 'react-router-hash-link';
-
 import './EventSection.scss';
 
 const EventList = () => {
+
+    //création variable d'état avec useState:
     const [selectedEvent, setSelectedEvent] = useState(null);
 
+    //tableau events pour contenir les routes & les images
     const events = ['Mariage', 'Anniversaire', 'Gender Reveal', 'Religion'];
 
     const handleEventHover = (event) => {

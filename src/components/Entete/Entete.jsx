@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../../config/firebase'
 import "./Entete.scss";
+
+//import des fonction de firebase
+import { auth } from '../../config/firebase'
 import { db } from "../../config/firebase"
-import { collection, addDoc, doc, getDocs, updateDoc } from "firebase/firestore";
+import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
 import { onAuthStateChanged, signOut } from 'firebase/auth'
-// import Facebook from '../../../public/img/svg/facebook.svg'
-// import Instagram from '../../../public/img/svg/instagram.svg'
-// import Tiktok from '../../../public/img/svg/tiktok.svg'
+
 
 const Entete = () => {
 
+  //connexion utilisateur
   const [authUser, setAuthUser] = useState(null);
   const navigate = useNavigate();
   useEffect(() => {
@@ -42,6 +43,7 @@ const Entete = () => {
   const userCollectionRef = collection(db, "user");
   const [editPhone, setEditPhone] = useState(false);
   const [editEmail, setEditEmail] = useState(false);
+
   //useEffect pour appeler les données de la bdd
   useEffect(() => {
 

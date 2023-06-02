@@ -1,8 +1,11 @@
-import "./Datatable.scss";
-import { DataGrid } from "@mui/x-data-grid";
-import { productColumns } from "../../config/datatablesource";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import "./Datatable.scss";
+//import de la grille chez mui
+import { DataGrid } from "@mui/x-data-grid";
+//import des données
+import { productColumns } from "../../config/datatablesource";
+//import des besoins pour la bdd
 import { db } from "../../config/firebase";
 import {
     collection,

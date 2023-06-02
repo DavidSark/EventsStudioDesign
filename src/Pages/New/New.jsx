@@ -1,23 +1,33 @@
-import "./New.scss";
-import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState, useRef, useEffect } from "react";
-import { db, storage } from "../../config/firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import "./New.scss";
+import { Link } from "react-router-dom";
+
+//import des composants
 import Entete from "../../components/Entete/Entete"
 import Menu from "../../components/Menu/Menu"
 import Footer from "../../components/Footer/Footer"
-import { Link } from "react-router-dom";
+
+//impor d'une icone depuis mui icon
+import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
+
+//import des besoins pour la bdd firebase
+import { db, storage } from "../../config/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../../config/firebase'
 
 
 
+
+
 const New = ({ inputs }) => {
 
-
+//usestate pour pour l'admin connecté
   const [authUser, setAuthUser] = useState(null);
 
+  //Si l'admin et connecté?
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -31,8 +41,6 @@ const New = ({ inputs }) => {
       listen();
     }
   }, []);
-
-
 
 
   const inputRefs = {
@@ -51,6 +59,7 @@ const New = ({ inputs }) => {
   //upload de l'image
   const [perc, setPerc] = useState(null)
 
+  //fonction d'upload dans firebase
   useEffect(() => {
     const uploadFile = () => {
       const name = new Date().getTime() + file.name;
@@ -99,12 +108,12 @@ const New = ({ inputs }) => {
   }
 
 
-
+//durée d'apparition de la popup
   useEffect(() => {
     if (showNotification) {
       const timer = setTimeout(() => {
         setShowNotification(false);
-      }, 3000); // Temps en millisecondes avant de masquer la pop-up (ici 3 secondes)
+      }, 3000); 
 
       return () => clearTimeout(timer);
     }

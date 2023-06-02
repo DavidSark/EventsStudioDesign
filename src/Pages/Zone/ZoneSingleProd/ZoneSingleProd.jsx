@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from "react";
-import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
-import "./ZoneSingleProd.scss";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { db, storage } from "../../../config/firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import "./ZoneSingleProd.scss";
+
+//Import des composants
 import Entete from "../../../components/Entete/Entete";
 import Menu from "../../../components/Menu/Menu";
 import Footer from "../../../components/Footer/Footer";
-import { Link } from "react-router-dom";
+
+//import des besoins de la bdd
+import { db, storage } from "../../../config/firebase";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../../../config/firebase'
+
+//import icon mui icon
+import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
+
 
 const ZoneSingleProd = () => {
   const [authUser, setAuthUser] = useState(null);

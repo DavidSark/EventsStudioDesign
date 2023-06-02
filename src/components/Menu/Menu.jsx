@@ -1,21 +1,26 @@
+//import des foncions et besoin react
 import React, { useRef, useState, useEffect } from 'react';
 import './Menu.scss';
-
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Menu = () => {
+
+  //useState pour définir l'état du menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef();
 
+  //ouvrir le menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  //fonction pour la navigation
   const handleClick = () => {
     window.scroll(0, 0); // Défilement de la page vers le haut
     setIsMenuOpen(false); // Fermeture du menu
   };
 
+  //enlever le défilement si le menu est ouvert
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -24,6 +29,7 @@ const Menu = () => {
     }
   }, [isMenuOpen]);
 
+  //fermeture du menu après navigation
   useEffect(() => {
     const handleRouteChange = () => {
       setIsMenuOpen(false);

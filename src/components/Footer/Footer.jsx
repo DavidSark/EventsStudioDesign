@@ -1,17 +1,17 @@
 
 import React, { useState, useEffect } from 'react'
 import './Footer.scss'
-import { useNavigate } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
+
+//import des fonction de firebase
 import { auth } from '../../config/firebase'
 import { db } from "../../config/firebase"
-import { collection, addDoc, doc, getDocs, updateDoc } from "firebase/firestore";
-import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+import { onAuthStateChanged } from 'firebase/auth'
 const Footer = () => {
-    //admin connecté ? : 
 
+    //admin connecté ? : 
     const [authUser, setAuthUser] = useState(null);
-    const navigate = useNavigate();
     useEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -68,8 +68,8 @@ const Footer = () => {
 
                 <div className="left">
                     <div className='left-text'>
-                        <h1>event's studio design</h1>
-                        <p>décoratrice événementielle basé à Reims et dans le Grand Est</p>
+                        <h1>titre</h1>
+                        <p>tagline</p>
                         {user && !editAdress ? (
                             <div className="footer-adress">
                                 {user.map((userData, index) => (
@@ -108,7 +108,7 @@ const Footer = () => {
                 </div>
                 <div className="center">
                     <img src="/img/svg/logo_noir.svg" alt="events studio design logo" />
-                    <p>Copyright © 2023 event’s studio design. Tous droits réservés.</p>
+                    <p>Copyright © 2023 titre. Tous droits réservés.</p>
                 </div>
 
                 <div className="container-line">
@@ -119,10 +119,10 @@ const Footer = () => {
                     <div className="right-prestations-website">
                         <div className='link-prestations'>
                             <p>Préstations</p>
-                            <Link to="prestations#mariage">Mariage</Link>
-                            <Link to="prestations/#anniversaire">Anniversaire</Link>
-                            <Link to="prestations/#gender">Gender Reveal</Link>
-                            <Link to="prestations/#religion">Foi & Religion</Link>
+                            <Link smooth to="/prestations/#mariage">Mariage</Link>
+                            <Link smooth to="/prestations/#anniversaire">Anniversaire</Link>
+                            <Link smooth to="/prestations/#gender reveal">Gender Reveal</Link>
+                            <Link smooth to="/prestations/#religion">Foi & Religion</Link>
                             <Link to="/galerie" onClick={handleClick}>Galerie</Link>
                             <Link to="/#contact">Contact</Link>
                         </div>
@@ -135,9 +135,9 @@ const Footer = () => {
                             <Link to="/zoneadmin" onClick={handleClick}>Zone Privée</Link>
                             <div className="link-social">
                                 <p>Réseaux</p>
-                                <Link to="https://www.facebook.com/profile.php?id=100063230651252" target='_blank' rel="noopener noreferrer">facebook</Link>
-                                <Link to="https://www.instagram.com/eventsstudiodesign/" target='_blank' rel="noopener noreferrer">instagram</Link>
-                                <Link to="https://www.tiktok.com/@eventsstudiodesign" target='_blank' rel="noopener noreferrer">tiktok</Link>
+                                <Link to="https://www.facebook.com/" target='_blank' rel="noopener noreferrer">facebook</Link>
+                                <Link to="https://www.instagram.com/" target='_blank' rel="noopener noreferrer">instagram</Link>
+                                <Link to="https://www.tiktok.com/" target='_blank' rel="noopener noreferrer">tiktok</Link>
 
                             </div>
                         </div>
