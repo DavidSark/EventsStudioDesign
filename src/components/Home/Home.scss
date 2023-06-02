@@ -108,7 +108,7 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         transition: all 0.3s ease-in-out;
         font-size: 1rem;
         font-weight: bold;
-        
+        text-decoration: none;
         &:before {
             content: '';
             position: absolute;

@@ -1,0 +1,36 @@
+.mentions-text{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    a{
+        color: #3A3A3A;
+    }
+    h2{
+        margin-bottom: 20px;
+        font-family: 'Poppins', 'sans-serif';
+        color: #3A3A3A;
+        font-size:1.3rem;
+        text-decoration: underline;
+        line-height: 1.2;
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.14);
+    }
+    p{
+        margin-bottom: 20px;
+        font-family: 'Poppins', 'sans-serif';
+        color: #3A3A3A;
+        font-size:1rem;
+        line-height: 1.2;
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.14);
+    }
+}
+
+
+
+@media screen and (min-width:1440px) { 
+
+    .mentions-text{
+        max-width: 1240px;
+       
+    }
+}
