@@ -5,3 +5,9 @@ User-agent: *
 Disallow: /build/
 Disallow: /dist/
 Disallow: /node_modules/
+
+Disallow: /zoneadmin/
+Disallow: /private/
+
+
+Sitemap: https://tangerine-manatee-6e4862.netlify.app/sitemap.xml
