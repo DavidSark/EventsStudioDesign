@@ -16,13 +16,14 @@ import ZoneLogin from './Pages/Zone/ZoneLogin/ZoneLogin';
 import ZoneAdmin from './Pages/Zone/ZoneAdmin/ZoneAdmin';
 
 
-//importe private route
+//import private route
 import ProtectedRoute from "./components/ProtectedRoute";
 import Single from "./Pages/Single/Single";
 import New from "./Pages/New/New";
 import ZoneSingleProd from "./Pages/Zone/ZoneSingleProd/ZoneSingleProd"
 
-
+//import de la meta description:
+import { Helmet } from 'react-helmet';
 
 
 
@@ -31,6 +32,13 @@ function App() {
 
   return (
     <div>
+
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Event's Studio Design</title>
+        <meta name="description" content="Location, présatation, décoratrice événementielle basée dans le Grand Est" />
+      </Helmet>
+
       <BrowserRouter>
 
         <Routes>
