@@ -104,9 +104,9 @@ $black-gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     padding: 0 20px;
 
     p {
-        font-family: 'Poppins', 'serif';
-        font-weight: 600;
-        font-size: 0.75rem;
+        font-family: 'Cormorant', 'serif';
+        font-weight: bold;
+        font-size: 1rem;
         line-height: 1.5;
         color: #24272A;
     }
@@ -237,12 +237,6 @@ $black-gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
             font-size: 1.5625rem;
         }
     }
-
-    .prestation-text-04 {
-        p {
-            font-size: 0.875rem;
-        }
-    }
 }
 
 
@@ -294,7 +288,7 @@ $black-gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     .prestation-text-04 {
         p {
             max-width: 650px;
-            font-size: 0.9375rem;
+            font-size: 1.3rem;
         }
     }
 

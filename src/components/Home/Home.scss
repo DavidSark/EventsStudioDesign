@@ -18,6 +18,13 @@ $black_gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
    
 }
 
+.resize-img{
+    border-style: solid;
+    border-width: 1px;
+    border-image: $gradient 1;
+    background-color: transparent;
+    padding: 10px;
+}
 .container-img {
     display: flex;
     flex-direction: column;

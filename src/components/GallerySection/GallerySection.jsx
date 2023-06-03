@@ -17,7 +17,7 @@ const GallerySection = () => {
 
                     <div className="container-gallery-img-parent">
                         <div className="container-gallery-img">
-                            <img src="./img/img_gallery.png" alt="" />
+                            <img src="./img/img_boutique.png" alt="" />
                         </div>
 
 

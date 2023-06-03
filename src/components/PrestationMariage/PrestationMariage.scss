@@ -114,9 +114,9 @@ $white_gradient: linear-gradient(90deg, #e7e7e7 0%, #e7e7e7 100%);
     padding: 0 20px;
 
     p {
-        font-family: 'Poppins', 'serif';
-        font-weight: 600;
-        font-size: 0.75rem;
+        font-family: 'Cormorant', 'serif';
+        font-weight: bold;
+        font-size: 1rem;
         line-height: 1.5;
         color: #E7E7E7;
     }
@@ -245,11 +245,6 @@ justify-content: center;
         }
     }
 
-    .prestation-text-001 {
-        p {
-            font-size: 0.875rem;
-        }
-    }
 }
 
 
@@ -297,7 +292,7 @@ justify-content: center;
     .prestation-text-001 {
         p {
             max-width: 650px;
-            font-size: 0.9375rem;
+            font-size: 1.3rem;
         }
     }
 

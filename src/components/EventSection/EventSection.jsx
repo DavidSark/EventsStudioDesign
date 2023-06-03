@@ -20,7 +20,7 @@ const EventList = () => {
                 <div className='event-container-img'>
                     <div className="event-image">
                         {selectedEvent && (
-                            <img src={`img/${selectedEvent.toLowerCase()}.png`} alt={selectedEvent} />
+                            <img src={`img/${selectedEvent.toLowerCase()}.jpg`} alt={selectedEvent} />
                         )}
                     </div>
                 </div>
