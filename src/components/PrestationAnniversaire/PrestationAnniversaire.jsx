@@ -19,7 +19,7 @@ const PrestationAnniversaire = () => {
                     </div>
 
                     <div className="prestation-img-center-anniv">
-                        <img src="../img/prestation-anniversaire.jpg" alt="" />
+                        <img src="../img/prestation-anniversaire.jpg" alt="anniversaire" />
                     </div>
 
                     <div className="prestation-text-02">
@@ -40,7 +40,7 @@ const PrestationAnniversaire = () => {
                 </div>
 
                 <div className="prestation-img-right-anniv">
-                    <img src="../img/prestation-anniversaire.jpg" alt="" />
+                <img src="../img/prestation-anniversaire.jpg" alt="anniversaire" />
                 </div>
             </div>
             <div className="container-line-center-anniv">

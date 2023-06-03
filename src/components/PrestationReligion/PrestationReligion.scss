@@ -81,7 +81,8 @@ $black-gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     img {
         width: 210px;
         height: 300px;
-
+        border: 1px solid #24272A;
+        padding: 20px;
     }
 }
 
@@ -184,10 +185,10 @@ $black-gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
         align-items: center;
 
         img {
-
             width: 35vw;
             max-width: 310px;
-            padding-right: 20px;
+            border: 1px solid #24272A;
+            padding: 20px;
         }
     }
 
@@ -215,7 +216,8 @@ $black-gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
     .prestation-img-right-religion {
         img {
             margin-top: 125px;
-            padding: 0 20px 0 0;
+            padding: 20px ;
+            margin-right: 20px;
         }
     }
 }
@@ -260,7 +262,7 @@ $black-gradient: linear-gradient(90deg, #24272A 0%, #24272A 100%);
 
         img {
             width: 35vw;
-            max-width: 470px;
+            max-width: 400px;
         }
     }
 

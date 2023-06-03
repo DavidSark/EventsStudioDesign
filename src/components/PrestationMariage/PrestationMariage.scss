@@ -91,7 +91,8 @@ $white_gradient: linear-gradient(90deg, #e7e7e7 0%, #e7e7e7 100%);
     img {
         width: 210px;
         height: 300px;
-
+        border: 1px solid #E7E7E7;
+        padding: 20px;
     }
 }
 
@@ -192,10 +193,10 @@ justify-content: center;
         align-items: center;
 
         img {
-
             width: 35vw;
             max-width: 310px;
             padding-right: 20px;
+            
         }
     }
 

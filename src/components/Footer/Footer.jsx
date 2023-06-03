@@ -108,7 +108,7 @@ const Footer = () => {
                 </div>
                 <div className="center">
                     <img src="/img/svg/logo_noir.svg" alt="events studio design logo" />
-                    <p>Copyright © 2023 Events Studio Design. Tous droits réservés.</p>
+                    <p>Copyright © 2023 Event's Studio Design. Tous droits réservés.</p>
                 </div>
 
                 <div className="container-line">

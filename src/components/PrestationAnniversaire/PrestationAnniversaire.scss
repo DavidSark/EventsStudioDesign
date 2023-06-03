@@ -38,6 +38,7 @@ $black_gradient: linear-gradient(90deg, #3A3A3A 0%, #3A3A3A 100%);
         color: #BCBCBC;
         font-size: 120px;
         width: 70px;
+        
     }
 
     h2 {
@@ -65,6 +66,8 @@ $black_gradient: linear-gradient(90deg, #3A3A3A 0%, #3A3A3A 100%);
     img {
         width: 210px;
         height: 300px;
+        border: 1px solid #24272A;
+        padding: 20px;
 
     }
 }
@@ -169,10 +172,10 @@ $black_gradient: linear-gradient(90deg, #3A3A3A 0%, #3A3A3A 100%);
         align-items: center;
 
         img {
-
+            border: 1px solid #3A3A3A;
             width: 35vw;
             max-width: 310px;
-            padding-right: 20px;
+            padding: 20px;
         }
     }
 
@@ -181,7 +184,6 @@ $black_gradient: linear-gradient(90deg, #3A3A3A 0%, #3A3A3A 100%);
         justify-content: start;
     }
 }
-
 
 
 @media screen and (min-width:728px) {
@@ -200,8 +202,10 @@ $black_gradient: linear-gradient(90deg, #3A3A3A 0%, #3A3A3A 100%);
 
     .prestation-img-right-anniv {
         img {
+            
             margin-top: 125px;
-            padding: 0 20px 0 0;
+            padding: 20px ;
+            margin-right: 20px;
         }
     }
 }
@@ -247,7 +251,9 @@ $black_gradient: linear-gradient(90deg, #3A3A3A 0%, #3A3A3A 100%);
 
         img {
             width: 35vw;
-            max-width: 470px;
+            max-width: 400px;
+            border: 1px solid #3A3A3A;
+            padding: 20px;
         }
     }
 

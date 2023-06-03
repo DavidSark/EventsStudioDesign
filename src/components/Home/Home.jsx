@@ -24,6 +24,7 @@ const Home = () => {
                 </div>
                 <div className='container-text'>
                     <h2>Location, prestation et décoratrice évenementielle basée dans le grand est</h2>
+                    
                     <div className='container-discover'>
                         <img src="/img/leaf-right.png" alt="" />
                         <Link to="/#entreprise" className='btn-decouvrir'>
